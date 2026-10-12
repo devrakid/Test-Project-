@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Dera-s Global Hairmpire — 100% human hair from a trusted Nigerian business. Wigs, bundles, frontals, closures and raw hair, delivered nationwide." />
+<title>Dera-s Global Hairmpire — Human Hair, Done Properly</title>
+<!-- Modern type: Poppins (display) + Roboto (body). Falls back to a clean system sans if offline. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Poppins Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2317130E'/%3E%3Cpath d='M7 4c0 5 2 7 2 11s-1 4-2 5M12 4c0 6 1 8 1 12s-1 3-2 4M17 4c0 5-2 7-2 11s1 4 2 5' stroke='%23F59A45' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#E0701E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dera-s Global Hairmpire">
+<meta property="og:title" content="Dera-s Global Hairmpire — Human Hair, Done Properly">
+<meta property="og:description" content="Dera-s Global Hairmpire — 100% human hair from a trusted Nigerian business. Wigs, bundles, frontals, closures and raw hair, delivered nationwide.">
+<!-- For a picture in WhatsApp/IG link previews, paste a hosted image link (e.g. Cloudinary) below -->
+<meta property="og:image" content="">
+<style>
+/* =========================================================
+   DERA HAIRS — design tokens
+   Palette: warm white, near-black ink, refined gold, soft gray
+   ========================================================= */
+:root{
+  --ink:#17130E;
+  --ink-2:#2C261F;
+  --gold:#E0701E;        /* accent — warm orange */
+  --gold-2:#F59A45;      /* lighter orange (highlights/gradients) */
+  --gold-soft:#FBE2CB;   /* soft orange tint */
+  --cream:#FAF7F1;
+  --paper:#FFFFFF;
+  --gray:#7A7268;
+  --gray-2:#A9A096;
+  --line:#E7E0D5;
+  --line-2:#F0EAE0;
+  --shadow-sm:0 1px 2px rgba(23,19,14,.06), 0 4px 14px rgba(23,19,14,.05);
+  --shadow-md:0 10px 30px -12px rgba(23,19,14,.22);
+  --shadow-lg:0 30px 60px -24px rgba(23,19,14,.30);
+  --r-sm:10px; --r:16px; --r-lg:26px; --r-pill:999px;
+  --bg:var(--cream); --surface:var(--paper); --text:var(--ink);
+  --muted:var(--gray); --border:var(--line); --soft:var(--line-2);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --maxw:1240px;
+  --font-display:"Poppins","Segoe UI Variable","Avenir Next",Futura,system-ui,"Segoe UI",Roboto,sans-serif;
+  --font-body:"Roboto","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#141009; --surface:#1D1810; --text:#F4EEE2; --muted:#B6AC9B;
+  --border:#332B20; --soft:#241E16; --paper:#1D1810; --cream:#141009;
+  --line:#332B20; --line-2:#241E16; --ink:#F4EEE2;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.4);
+  --shadow-md:0 14px 40px -14px rgba(0,0,0,.6);
+  --shadow-lg:0 34px 70px -26px rgba(0,0,0,.7);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;animation-iteration-count:1!important}
+}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);color:var(--text);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;transition:background .4s var(--ease),color .4s var(--ease);
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:1rem}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.eyebrow{
+  font-family:var(--font-body);font-size:.72rem;font-weight:700;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--gold);
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.section{padding:clamp(56px,8vw,108px) 0}
+.sec-head{max-width:640px;margin-bottom:clamp(30px,5vw,52px)}
+.sec-head h2{
+  font-family:var(--font-display);font-weight:600;line-height:1.04;
+  font-size:clamp(1.9rem,4.6vw,3.1rem);letter-spacing:-.01em;margin:.5rem 0 .6rem;
+}
+.sec-head p{color:var(--muted);font-size:1.02rem;max-width:54ch}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .eyebrow::before{display:none}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-weight:600;font-size:.94rem;letter-spacing:.01em;
+  padding:.92rem 1.7rem;border-radius:var(--r-pill);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .3s,color .3s,border-color .3s;
+  white-space:nowrap;
+}
+.btn svg{width:18px;height:18px}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#241B08;box-shadow:0 12px 28px -10px rgba(182,138,60,.7)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 34px -10px rgba(182,138,60,.8)}
+.btn-ink{background:var(--ink);color:var(--bg)}
+[data-theme="dark"] .btn-ink{background:var(--gold);color:#241B08}
+.btn-ink:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-outline{border:1.5px solid var(--border);color:var(--text);background:var(--surface)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn-ghost{padding:.7rem 1rem}
+.btn-block{width:100%}
+.btn-lg{padding:1.05rem 2rem;font-size:1rem}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.topbar{
+  background:var(--ink);color:var(--cream);font-size:.78rem;letter-spacing:.08em;
+  text-transform:uppercase;text-align:center;padding:.5rem 22px;
+}
+[data-theme="dark"] .topbar{background:#FAF7F1;}
+.topbar b{color:var(--gold-2);}
+.topbar span {font-weight:bold;}
+header.site{
+  position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--surface) 86%,transparent);
+  backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--soft);
+  transition:box-shadow .35s var(--ease),background .4s;
+}
+header.site.scrolled{box-shadow:var(--shadow-sm)}
+.nav{display:flex;align-items:center;gap:1.4rem;height:74px}
+.brand{display:flex;align-items:center;gap:.7rem;margin-right:1rem;}
+.brand .mark img{width:40px;height:40px;border-radius:100%;}
+.brand .name{font-family:var(--font-display);font-size:1.34rem;font-weight:600;letter-spacing:.01em;line-height:1}
+.brand .name span{color:var(--gold)}
+.brand small{display:block;font-family:var(--font-body);font-size:.56rem;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.menu{display:flex;align-items:center;gap:.3rem;margin:0 auto}
+.menu a{
+  position:relative;padding:.55rem .85rem;font-weight:500;font-size:.95rem;color:var(--text);
+  border-radius:8px;transition:color .25s;
+}
+.menu a::after{content:"";position:absolute;left:.85rem;right:.85rem;bottom:.34rem;height:1.5px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.menu a:hover{color:var(--gold)}
+.menu a:hover::after{transform:scaleX(1)}
+.actions{display:flex;align-items:center;gap:.32rem;}
+.icon-btn{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;position:relative;
+  color:var(--text);transition:background .25s,color .25s,transform .25s;
+}
+.icon-btn:hover{background:var(--soft);color:var(--gold);transform:translateY(-1px)}
+.icon-btn svg{width:21px;height:21px}
+.badge{
+  position:absolute;top:5px;right:5px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;
+  background:var(--gold);color:#241B08;font-size:.66rem;font-weight:800;display:grid;place-items:center;
+  transform:scale(0);transition:transform .3s var(--ease)}
+.badge.show{transform:scale(1)}
+.hamburger{display:none}
+
+/* search overlay */
+.searchbar{
+  position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow-md);padding:18px 22px;transform:translateY(-120%);opacity:0;pointer-events:none;
+  transition:transform .4s var(--ease),opacity .3s}
+.searchbar.open{transform:translateY(0);opacity:1;pointer-events:auto}
+.searchbar form{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:.7rem;
+  border:1.5px solid var(--border);border-radius:var(--r-pill);padding:.5rem .5rem .5rem 1.2rem}
+.searchbar input{flex:1;border:none;background:none;color:var(--text);font-size:1.05rem;outline:none}
+.search-hint{max-width:760px;margin:.7rem auto 0;color:var(--muted);font-size:.84rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.search-hint button{font-size:.8rem;color:var(--gold);border:1px solid var(--border);padding:.25rem .7rem;border-radius:var(--r-pill)}
+
+/* =========================================================
+   HERO — editorial split, signature strand motif
+   ========================================================= */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1100px 520px at 88% -8%,rgba(182,138,60,.16),transparent 60%),
+  radial-gradient(700px 500px at -5% 110%,rgba(182,138,60,.10),transparent 60%),var(--bg)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+  padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(40px,6vw,90px)}
+.hero-copy{max-width:560px}
+.hero h1{
+  font-family:var(--font-display);font-weight:600;letter-spacing:-.018em;line-height:1.02;
+  font-size:clamp(2.6rem,6.4vw,4.6rem);margin:1.1rem 0 1.1rem}
+.hero h1 span{color:var(--gold)}
+.hero p.lede{font-size:1.12rem;color:var(--muted);max-width:46ch}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.9rem}
+.hero-trust{display:flex;gap:1.8rem;margin-top:2.4rem;flex-wrap:wrap}
+.hero-trust .t{display:flex;flex-direction:column}
+.hero-trust .t b{font-family:var(--font-display);font-size:1.6rem;line-height:1}
+.hero-trust .t span{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+
+/* hero portrait card */
+.hero-art{position:relative}
+.portrait{
+  position:relative;aspect-ratio:4/5;border-radius:30px;overflow:hidden;box-shadow:var(--shadow-lg);
+  border:1px solid var(--soft)}
+.portrait img{width:100%;height:100%}
+.promo-badge{
+  position:absolute;top:18px;left:18px;background:var(--ink);color:var(--cream);
+  border-radius:18px;padding:.85rem 1rem;box-shadow:var(--shadow-md);text-align:center;line-height:1.05;
+  transform:rotate(-4deg);z-index:2;border:1px solid rgba(217,177,100,.3)}
+.promo-badge b{display:block;font-family:var(--font-display);font-size:1.7rem;color:var(--gold-2)}
+.promo-badge span{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase}
+.float-card{
+  position:absolute;right:-10px;bottom:24px;background:var(--surface);border:1px solid var(--border);
+  border-radius:18px;padding:8px 16px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:.7rem;z-index:2;
+  animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-9px)}}
+ /*.float-card .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-2))} */
+.float-card b{font-size:.86rem}
+.float-card span{font-size:.74rem;color:var(--muted)}
+.stars{color:var(--gold);letter-spacing:1px;font-size:.8rem}
+
+/* marquee strip */
+.strip{border-top:1px solid var(--soft);border-bottom:1px solid var(--soft);background:var(--surface);overflow:hidden}
+.strip .track{display:flex;gap:3.4rem;white-space:nowrap;padding:14px 0;animation:scroll 26s linear infinite;width:max-content}
+.strip .track span{font-family:var(--font-display);font-size:1.05rem;color:var(--muted);display:flex;align-items:center;gap:3.4rem}
+.strip .track span::after{content:"✦";color:var(--gold);font-size:.7rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat-card{
+  position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1.12;cursor:pointer;
+  border:1px solid var(--soft);box-shadow:var(--shadow-sm);transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.cat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.cat-card .bg{position:absolute;inset:0}
+.cat-card .bg img{width:100%;height:100%;object-fit:cover}
+.cat-card .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,8,.78),rgba(15,12,8,.04) 55%)}
+.cat-card .meta{position:absolute;left:0;right:0;bottom:0;padding:16px;color:#fff;z-index:2}
+.cat-card .meta b{font-family:var(--font-display);font-size:1.16rem;display:block}
+.cat-card .meta span{font-size:.78rem;opacity:.82;display:inline-flex;align-items:center;gap:.4rem}
+.cat-card .meta .arrow{transition:transform .35s var(--ease);display:inline-block}
+.cat-card:hover .meta .arrow{transform:translateX(5px)}
+.cat-card .count{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);
+  color:#fff;font-size:.7rem;font-weight:600;padding:.3rem .6rem;border-radius:var(--r-pill);z-index:2}
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
+.toolbar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:26px}
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+.chip{
+  border:1.5px solid var(--border);background:var(--surface);color:var(--text);
+  padding:.5rem 1rem;border-radius:var(--r-pill);font-size:.85rem;font-weight:500;
+  transition:all .25s var(--ease)}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.chip.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+[data-theme="dark"] .chip.active{background:var(--gold);color:#241B08;border-color:var(--gold)}
+.select{position:relative}
+.select select{
+  appearance:none;border:1.5px solid var(--border);background:var(--surface);color:var(--text);
+  padding:.6rem 2.4rem .6rem 1rem;border-radius:var(--r-pill);font-size:.85rem;font-weight:500;cursor:pointer}
+.select::after{content:"▾";position:absolute;right:1rem;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)}
+
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.shop-grid{grid-template-columns:repeat(3,1fr)}
+.card{
+  background:var(--surface);border:1px solid var(--soft);border-radius:var(--r);overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s;position:relative}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--gold-soft)}
+.card .thumb{position:relative;aspect-ratio:1/1.08;overflow:hidden;cursor:pointer;background:var(--soft)}
+.card .thumb svg{width:100%;height:100%;transition:transform .6s var(--ease)}
+.card:hover .thumb svg{transform:scale(1.05)}
+.tag{position:absolute;top:12px;left:12px;background:var(--gold);color:#241B08;font-size:.68rem;font-weight:800;
+  letter-spacing:.04em;padding:.28rem .6rem;border-radius:var(--r-pill);z-index:2;text-transform:uppercase}
+.tag.new{background:var(--ink);color:var(--cream)}
+.wish{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;background:var(--surface);
+  display:none;place-items:center;box-shadow:var(--shadow-sm);z-index:3;transition:transform .25s,color .25s}
+.wish:hover{transform:scale(1.1);color:#d6446b}
+.wish svg{width:18px;height:18px;transition:fill .25s,stroke .25s}
+.wish.active{color:#d6446b}
+.wish.active svg{fill:#d6446b;stroke:#d6446b}
+.hover-actions{position:absolute;left:12px;right:12px;bottom:12px;display:flex;gap:8px;z-index:2;
+  opacity:0;transform:translateY(10px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.card:hover .hover-actions{opacity:1;transform:translateY(0)}
+.qv{flex:1;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:var(--r-pill);
+  padding:.6rem;font-size:.82rem;font-weight:600;box-shadow:var(--shadow-sm)}
+.qv:hover{color:var(--gold)}
+.card .body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.card .cat{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.card h3{font-family:var(--font-display);font-size:1.06rem;font-weight:600;line-height:1.2;cursor:pointer}
+.card h3:hover{color:var(--gold)}
+.rate{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--muted)}
+.price{display:flex;align-items:baseline;gap:.6rem;margin-top:.2rem}
+.price .now{font-size:1.16rem;font-weight:800;color:var(--text)}
+.price .was{font-size:.86rem;color:var(--gray-2);text-decoration:line-through}
+.price .off{font-size:.72rem;font-weight:700;color:#2f9e6f;background:rgba(47,158,111,.12);padding:.1rem .45rem;border-radius:6px}
+.card .add{margin-top:.7rem;width:100%;background:var(--ink);color:var(--bg);border-radius:var(--r-pill);
+  padding:.7rem;font-weight:600;font-size:.88rem;display:flex;align-items:center;justify-content:center;gap:.5rem;
+  transition:transform .25s,background .25s}
+[data-theme="dark"] .card .add{background:var(--gold);color:#241B08}
+.card .add:hover{transform:translateY(-2px)}
+.card .add svg{width:17px;height:17px}
+.empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)}
+.empty svg{width:54px;height:54px;margin:0 auto 14px;color:var(--gray-2)}
+
+/* =========================================================
+   PROMO BANNER
+   ========================================================= */
+.promo{background:linear-gradient(135deg,var(--ink),var(--ink-2));color:var(--cream);border-radius:var(--r-lg);
+  padding:clamp(32px,5vw,60px);position:relative;overflow:hidden;display:grid;grid-template-columns:1.3fr 1fr;
+  gap:30px;align-items:center}
+.promo::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 300px at 100% 0,rgba(217,177,100,.28),transparent 60%)}
+.promo > *{position:relative;z-index:1}
+.promo h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.05;margin-bottom:.7rem}
+.promo h2 em{color:var(--gold-2);font-style:italic}
+.promo p{color:rgba(244,238,226,.78);max-width:46ch;margin-bottom:1.6rem}
+.countdown{display:flex;gap:12px}
+.countdown .u{background:rgba(255,255,255,.08);border:1px solid rgba(217,177,100,.25);border-radius:14px;
+  padding:.8rem 1rem;text-align:center;min-width:74px}
+.countdown .u b{font-family:var(--font-display);font-size:1.8rem;display:block;color:var(--gold-2)}
+.countdown .u span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+
+/* =========================================================
+   ABOUT / STATS
+   ========================================================= */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center}
+.about-art{aspect-ratio:1/1;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--soft)}
+.about-art svg{width:100%;height:100%}
+.why{display:grid;gap:14px;margin-top:1.6rem}
+.why li{display:flex;gap:.9rem;align-items:flex-start}
+.why .ic{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+  background:var(--soft);color:var(--gold)}
+.why .ic svg{width:20px;height:20px}
+.why b{display:block;font-size:.98rem}
+.why span{font-size:.88rem;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:clamp(36px,5vw,56px)}
+.stat{text-align:center;padding:26px 14px;border:1px solid var(--soft);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow-sm)}
+.stat b{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);line-height:1;color:var(--gold);display:block}
+.stat span{font-size:.82rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.tslider{position:relative;max-width:840px;margin:0 auto;overflow:hidden}
+.ttrack{display:flex;transition:transform .6s var(--ease)}
+.tslide{flex:0 0 100%;padding:6px}
+.tcard{background:var(--surface);border:1px solid var(--soft);border-radius:var(--r-lg);padding:clamp(28px,4vw,46px);
+  text-align:center;box-shadow:var(--shadow-sm)}
+.tcard .stars{font-size:1.05rem;margin-bottom:1rem}
+.tcard blockquote{font-family:var(--font-display);font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.5;font-style:italic}
+.tcard .who{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.6rem}
+.tcard .who .av{width:48px;height:48px;border-radius:50%;overflow:hidden;box-shadow:var(--shadow-sm)}
+.tcard .who .av svg{width:100%;height:100%}
+.tcard .who b{display:block;font-size:.96rem}
+.tcard .who span{font-size:.8rem;color:var(--muted)}
+.tdots{display:flex;gap:8px;justify-content:center;margin-top:24px}
+.tdots button{width:9px;height:9px;border-radius:50%;background:var(--border);transition:all .3s}
+.tdots button.active{background:var(--gold);width:26px;border-radius:5px}
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+.news{background:linear-gradient(135deg,var(--gold),var(--gold-2));border-radius:var(--r-lg);
+  padding:clamp(34px,5vw,60px);text-align:center;color:#2A2008;position:relative;overflow:hidden}
+.news::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 220px at 0 100%,rgba(255,255,255,.3),transparent)}
+.news > *{position:relative;z-index:1}
+.news h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:.5rem}
+.news p{max-width:48ch;margin:0 auto 1.6rem;color:#3a2c0d}
+.news form{display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.news input{flex:1;min-width:200px;border:none;border-radius:var(--r-pill);padding:.95rem 1.3rem;background:rgba(255,255,255,.92);color:#2A2008;outline:none}
+.news .btn{background:#2A2008;color:var(--gold-2)}
+.news .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,4vw,48px)}
+.contact-info{display:grid;gap:18px;align-content:start}
+.cinfo{display:flex;gap:1rem;align-items:flex-start;padding:18px;border:1px solid var(--soft);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow-sm)}
+.cinfo .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--gold)}
+.cinfo .ic svg{width:22px;height:22px}
+.cinfo b{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block}
+.cinfo span{font-size:1.02rem;font-weight:500}
+.map{margin-top:4px;border-radius:var(--r);overflow:hidden;border:1px solid var(--soft);height:180px;position:relative;background:var(--soft)}
+.map svg{width:100%;height:100%}
+.map .pin{position:absolute;inset:0;display:grid;place-items:center;color:var(--gold)}
+.map .pin span{background:var(--surface);padding:.4rem .9rem;border-radius:var(--r-pill);font-size:.82rem;font-weight:600;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:.4rem}
+.form-card{background:var(--surface);border:1px solid var(--soft);border-radius:var(--r-lg);padding:clamp(24px,3.5vw,38px);box-shadow:var(--shadow-sm)}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;letter-spacing:.02em}
+.field input,.field textarea,.field select{
+  width:100%;border:1.5px solid var(--border);background:var(--bg);color:var(--text);
+  border-radius:12px;padding:.85rem 1rem;outline:none;transition:border-color .25s,box-shadow .25s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(182,138,60,.15)}
+.field textarea{resize:vertical;min-height:120px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer.site{background:var(--ink);color:#D9D2C5;padding:64px 0 26px;margin-top:20px}
+[data-theme="dark"] footer.site{background:#0E0B06}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px}
+footer .brand .name{color:#fff}
+footer .fabout{color:#A89F90;font-size:.92rem;max-width:34ch;margin:1rem 0 1.3rem}
+.socials{display:flex;gap:10px}
+.socials a{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.07);
+  transition:background .25s,transform .25s,color .25s}
+.socials a:hover{background:var(--gold);color:#241B08;transform:translateY(-2px)}
+.socials svg{width:19px;height:19px}
+footer h4{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:1.1rem}
+footer ul li{margin-bottom:.7rem}
+footer ul a{color:#A89F90;font-size:.92rem;transition:color .25s}
+footer ul a:hover{color:var(--gold-2)}
+.fbar{border-top:1px solid rgba(255,255,255,.1);margin-top:46px;padding-top:22px;display:flex;
+  justify-content:center;gap:14px;flex-wrap:wrap;color:#8C8474;font-size:.84rem}
+.fpay{display:flex;gap:8px;align-items:center}
+.fpay span{background:rgba(255,255,255,.08);border-radius:6px;padding:.25rem .55rem;font-size:.68rem;font-weight:700;letter-spacing:.06em}
+
+/* =========================================================
+   CART DRAWER
+   ========================================================= */
+.overlay{position:fixed;inset:0;background:rgba(15,12,8,.55);backdrop-filter:blur(3px);opacity:0;pointer-events:none;
+  transition:opacity .4s var(--ease);z-index:90}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--surface);z-index:100;
+  display:flex;flex-direction:column;transform:translateX(100%);transition:transform .45s var(--ease);box-shadow:var(--shadow-lg)}
+.drawer.open{transform:translateX(0)}
+.drawer header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--soft)}
+.drawer header h3{font-family:var(--font-display);font-size:1.3rem;display:flex;align-items:center;gap:.5rem}
+.drawer .close{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;transition:background .25s}
+.drawer .close:hover{background:var(--soft);color:var(--gold)}
+.cart-items{flex:1;overflow-y:auto;padding:12px 22px}
+.citem{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--soft)}
+.citem .img{width:72px;height:80px;border-radius:10px;overflow:hidden;flex:none;background:var(--soft)}
+.citem .img svg{width:100%;height:100%}
+.citem .info{flex:1;min-width:0}
+.citem h4{font-family:var(--font-display);font-size:1rem;font-weight:600}
+.citem .v{font-size:.76rem;color:var(--muted)}
+.citem .p{font-weight:700;margin-top:.2rem}
+.citem .rm{font-size:.76rem;color:var(--muted);text-decoration:underline;margin-top:.3rem}
+.citem .rm:hover{color:#d6446b}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--border);border-radius:var(--r-pill);overflow:hidden;margin-top:.4rem}
+.qty button{width:30px;height:30px;display:grid;place-items:center;font-size:1.1rem;transition:background .2s}
+.qty button:hover{background:var(--soft);color:var(--gold)}
+.qty span{min-width:30px;text-align:center;font-weight:600;font-size:.9rem}
+.cart-empty{text-align:center;padding:48px 20px;color:var(--muted)}
+.cart-empty svg{width:64px;height:64px;margin:0 auto 16px;color:var(--gray-2)}
+.drawer footer{padding:20px 22px;border-top:1px solid var(--soft);background:var(--surface)}
+.crow{display:flex;justify-content:space-between;margin-bottom:.5rem;font-size:.92rem;color:var(--muted)}
+.crow.total{font-size:1.16rem;font-weight:800;color:var(--text);margin:.7rem 0 1rem;padding-top:.7rem;border-top:1px solid var(--soft)}
+.ship-note{font-size:.78rem;color:var(--gold);background:var(--soft);border-radius:10px;padding:.6rem .8rem;margin-bottom:1rem;display:flex;gap:.5rem;align-items:center}
+.ship-bar{height:5px;background:var(--soft);border-radius:5px;overflow:hidden;margin:.4rem 0 1rem}
+.ship-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2));transition:width .5s var(--ease)}
+
+/* =========================================================
+   MODAL (product details / quick view / checkout)
+   ========================================================= */
+.modal{position:fixed;inset:0;z-index:110;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;
+  transition:opacity .35s var(--ease)}
+.modal.show{opacity:1;pointer-events:auto}
+.modal-bg{position:absolute;inset:0;background:rgba(15,12,8,.6);backdrop-filter:blur(4px)}
+.modal-box{position:relative;background:var(--surface);border-radius:var(--r-lg);width:min(960px,100%);
+  max-height:92vh;overflow-y:auto;box-shadow:var(--shadow-lg);transform:translateY(24px) scale(.98);transition:transform .4s var(--ease)}
+.modal.show .modal-box{transform:none}
+.modal-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;background:var(--surface);
+  display:grid;place-items:center;box-shadow:var(--shadow-sm);z-index:5;transition:transform .25s,color .25s}
+.modal-close:hover{transform:rotate(90deg);color:var(--gold)}
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.pd-gallery{padding:24px;background:var(--bg)}
+.pd-main{aspect-ratio:1/1.05;border-radius:var(--r);overflow:hidden;border:1px solid var(--soft);background:var(--soft)}
+.pd-main svg{width:100%;height:100%}
+.pd-thumbs{display:flex;gap:10px;margin-top:12px}
+.pd-thumbs button{width:64px;height:64px;border-radius:10px;overflow:hidden;border:2px solid transparent;background:var(--soft)}
+.pd-thumbs button.active{border-color:var(--gold)}
+.pd-thumbs svg{width:100%;height:100%}
+.pd-info{padding:clamp(22px,3vw,34px)}
+.pd-info .cat{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.pd-info h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.1;margin:.4rem 0}
+.pd-info .rate{margin-bottom:.8rem}
+.pd-price{display:flex;align-items:baseline;gap:.8rem;margin:.6rem 0 1rem}
+.pd-price .now{font-size:1.7rem;font-weight:800}
+.pd-price .was{color:var(--gray-2);text-decoration:line-through}
+.pd-price .off{background:rgba(47,158,111,.12);color:#2f9e6f;font-weight:700;font-size:.8rem;padding:.15rem .5rem;border-radius:6px}
+.pd-desc{color:var(--muted);font-size:.95rem;margin-bottom:1.2rem}
+.opt-group{margin-bottom:1rem}
+.opt-group .lbl{font-size:.78rem;font-weight:700;letter-spacing:.04em;margin-bottom:.5rem;display:flex;justify-content:space-between}
+.opt-group .lbl span{color:var(--gold);font-weight:600}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{border:1.5px solid var(--border);background:var(--surface);border-radius:10px;padding:.5rem .85rem;font-size:.84rem;font-weight:500;transition:all .2s}
+.opt:hover{border-color:var(--gold)}
+.opt.active{border-color:var(--gold);background:var(--gold);color:#241B08;font-weight:700}
+.pd-actions{display:flex;gap:10px;margin:1.2rem 0 1rem;flex-wrap:wrap}
+.pd-actions .qty{margin:0}
+.specs{border-top:1px solid var(--soft);padding-top:1rem;margin-top:.4rem}
+.specs h4{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.7rem}
+.specs dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;font-size:.88rem}
+.specs dt{color:var(--muted)}
+.specs dd{font-weight:600;text-align:right}
+.reviews{border-top:1px solid var(--soft);margin-top:1.2rem;padding-top:1.2rem}
+.reviews h4{font-family:var(--font-display);font-size:1.1rem;margin-bottom:.8rem}
+.review{padding:12px 0;border-bottom:1px solid var(--soft)}
+.review .top{display:flex;justify-content:space-between;align-items:center}
+.review b{font-size:.9rem}
+.review .stars{font-size:.78rem}
+.review p{font-size:.88rem;color:var(--muted);margin-top:.3rem}
+
+/* checkout */
+.checkout{padding:clamp(24px,3.5vw,40px)}
+.checkout h2{font-family:var(--font-display);font-size:1.7rem;margin-bottom:.3rem}
+.checkout .sub{color:var(--muted);font-size:.92rem;margin-bottom:1.6rem}
+.checkout-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:30px}
+.co-block{margin-bottom:1.6rem}
+.co-block h3{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.co-block h3 i{width:22px;height:22px;border-radius:50%;background:var(--gold);color:#241B08;display:grid;place-items:center;font-size:.72rem;font-weight:800;font-style:normal}
+.pay-opts{display:grid;gap:10px}
+.pay{display:flex;align-items:center;gap:.8rem;border:1.5px solid var(--border);border-radius:12px;padding:.9rem 1rem;cursor:pointer;transition:all .2s}
+.pay:hover{border-color:var(--gold)}
+.pay.active{border-color:var(--gold);background:var(--soft)}
+.pay .dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--border);flex:none;display:grid;place-items:center}
+.pay.active .dot{border-color:var(--gold)}
+.pay.active .dot::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.pay b{font-size:.92rem}
+.pay span{font-size:.78rem;color:var(--muted);display:block}
+.summary{background:var(--bg);border:1px solid var(--soft);border-radius:var(--r);padding:22px;align-self:start;position:sticky;top:20px}
+.summary h3{font-family:var(--font-display);font-size:1.2rem;margin-bottom:1rem}
+.sitem{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--soft);font-size:.86rem}
+.sitem .ti{width:46px;height:52px;border-radius:8px;overflow:hidden;flex:none;background:var(--soft)}
+.sitem .ti svg{width:100%;height:100%}
+.sitem .n{flex:1}
+.sitem .n span{color:var(--muted);font-size:.76rem;display:block}
+
+/* =========================================================
+   TOAST + SCROLL TOP + PRELOADER
+   ========================================================= */
+.toasts{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:10px;align-items:center;width:min(92vw,380px)}
+.toast{background:var(--ink);color:var(--cream);border-radius:14px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.7rem;
+  box-shadow:var(--shadow-lg);font-size:.9rem;width:100%;transform:translateY(20px);opacity:0;transition:transform .4s var(--ease),opacity .4s;border:1px solid rgba(217,177,100,.25)}
+.toast.show{transform:none;opacity:1}
+.toast .ic{width:30px;height:30px;border-radius:50%;background:var(--gold);color:#241B08;display:grid;place-items:center;flex:none}
+.toast .ic svg{width:17px;height:17px}
+.toast b{color:#fff}
+[data-theme="dark"] .toast{background:#000}
+
+.totop{position:fixed;bottom:22px;right:22px;width:50px;height:50px;border-radius:50%;background:var(--ink);color:var(--cream);
+  display:grid;place-items:center;box-shadow:var(--shadow-lg);z-index:80;opacity:0;transform:translateY(20px) scale(.8);
+  pointer-events:none;transition:all .4s var(--ease)}
+[data-theme="dark"] .totop{background:var(--gold);color:#241B08}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-3px)}
+.totop svg{width:22px;height:22px}
+
+#preloader{position:fixed;inset:0;z-index:300;background:var(--bg);display:grid;place-items:center;transition:opacity .6s var(--ease)}
+#preloader.hide{opacity:0;pointer-events:none}
+.loader{text-align:center}
+.loader img {height:100px; width:100px; border-radius:100%; margin:0 auto 20px
+;}
+.loader .lname{font-family:Poppins, sans-serif;font-size:1.8rem;letter-spacing:.02em}
+.loader .lname span{color:var(--gold)}
+.loader .lbar{width:160px;height:3px;background:var(--soft);border-radius:3px;margin:18px auto 0;overflow:hidden}
+.loader .lbar i{display:block;height:100%;width:40%;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:3px;animation:load 1s ease-in-out infinite}
+@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1080px){
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .product-grid{grid-template-columns:repeat(3,1fr)}
+  .shop-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .menu{display:none}
+  .hamburger{display:grid}
+  .hero .wrap{grid-template-columns:1fr;gap:34px}
+  .hero-art{max-width:440px;margin:0 auto;width:100%}
+  .about,.contact,.checkout-grid,.promo{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .summary{position:static}
+  .pd{grid-template-columns:1fr}
+  .pd-gallery{background:var(--surface)}
+}
+@media (max-width:680px){
+  .cat-grid,.product-grid,.shop-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .hero-trust{gap:1.3rem}
+  .hide-sm{display:none}
+  .brand small{display:none}
+  .fgrid{grid-template-columns:1fr}
+  .promo{text-align:center}
+  .countdown{justify-content:center}
+}
+@media (max-width:420px){
+  .cat-grid,.product-grid,.shop-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .card .body{padding:12px}
+}
+
+/* mobile nav menu */
+.mobile-menu{position:fixed;inset:0 0 0 auto;width:min(320px,86%);background:var(--surface);z-index:100;
+  transform:translateX(100%);transition:transform .45s var(--ease);box-shadow:var(--shadow-lg);display:flex;flex-direction:column;padding:22px}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu .mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem}
+.mobile-menu nav a{display:block;padding:1rem .4rem;font-family:var(--font-display);font-size:1.3rem;border-bottom:1px solid var(--soft)}
+.mobile-menu nav a:hover{color:var(--gold)}
+.mobile-menu .mfoot{margin-top:auto;display:flex;gap:10px}
+
+/* ---- product photos & videos ---- */
+.thumb img,.thumb video,.pd-main img,.pd-main video,.pd-thumbs img,.pd-thumbs video,
+.citem .img img,.citem .img video,.sitem .ti img,.sitem .ti video{width:100%;height:100%;object-fit:cover;display:block}
+/* ---- floating WhatsApp ---- */
+.wa-float{position:fixed;left:18px;bottom:18px;z-index:60;width:54px;height:54px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.45);
+  transition:transform .25s var(--ease)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:28px;height:28px}
+@media(max-width:640px){.wa-float{width:50px;height:50px;left:14px;bottom:14px}}
+</style>
+</head>
+<body>
+<!-- PRELOADER -->
+<div id="preloader"><div class="loader">
+  <img src="/logo.jpg" alt="">
+  <div class="lname">Dera-s Global <span>Hairmpire</span></div>
+  <div class="lbar"><i></i></div>
+</div></div>
+
+<!-- TOP BAR -->
+<div class="topbar">Free express delivery on orders over <b>₦150,000</b> <span>motto : looking good is our priority</span></div>
+
+<!-- HEADER -->
+<header class="site" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Dera Hairs home">
+      <span class="mark" aria-hidden="true">
+        <img src="/logo.jpg">
+      </span>
+      <span class="name">Dera<span>Hairs</span><small>Luxury Human Hair</small></span>
+    </a>
+
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="#categories" data-link>Categories</a>
+      <a href="#testimonials" data-link>Reviews</a>
+      <a href="about.html">About Us</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn hide-sm" id="themeToggle" aria-label="Toggle dark mode">
+        <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn hide-sm" id="wishBtn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.6-9.3-9.1C1.2 8 2.6 5 5.6 5c2 0 3.3 1.2 4.4 2.6C11.1 6.2 12.4 5 14.4 5c3 0 4.4 3 2.9 5.9C19 15.4 12 20 12 20Z" stroke-linejoin="round"/></svg>
+        <span class="badge" id="wishBadge">0</span>
+      </button>
+      <button class="icon-btn" id="accountBtn" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.7-3.6 3.6-5.5 7-5.5S18.3 16.4 19 20" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 7h13l-1.2 9.3a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 4H3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20.5" r="1.3" fill="currentColor"/><circle cx="17" cy="20.5" r="1.3" fill="currentColor"/></svg>
+        <span class="badge" id="cartBadge">0</span>
+      </button>
+      <button class="icon-btn hamburger" id="hamb" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <div class="searchbar" id="searchbar">
+    <form id="searchForm">
+      <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" stroke-linecap="round"/></svg>
+      <input type="search" id="searchInput" placeholder="Search wigs, bundles, frontals…" autocomplete="off" />
+      <button type="submit" class="btn btn-gold btn-ghost">Search</button>
+    </form>
+    <div class="search-hint" id="searchHint">
+      <span>Popular:</span>
+      <button data-q="bone straight">Bone Straight</button>
+      <button data-q="wig">Wigs</button>
+      <button data-q="curly">Curly</button>
+      <button data-q="frontal">Frontals</button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mhead">
+    <span class="brand"><span class="name">Dera-s Global <span>Hairmpire</span></span></span>
+    <button class="icon-btn" id="closeMobile" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#categories" data-link>Categories</a>
+    <a href="#testimonials" data-link>Reviews</a>
+    <a href="about.html">About Us</a>
+    <a href="help.html">FAQs</a>
+    <a href="#contact" data-link>Contact</a>
+  </nav>
+  <div class="mfoot">
+    <button class="btn btn-outline btn-block" id="themeToggleM">Dark mode</button>
+  </div>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">100% Human Hairs sold at</span>
+      <h1>Dera-s Global <span>Hairmpire</span></h1>
+      <p class="lede">Premium human hair wigs, bundles, frontals and closures crafted to last. Soft, full, and tangle-free, with shades that move like the real thing because it is.</p>
+      <div class="hero-cta">
+        <a href="shop.html" class="btn btn-gold btn-lg">Shop Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#categories" class="btn btn-outline btn-lg" data-link>View Collection</a>
+      </div>
+      <div class="hero-trust">
+        <div class="t"><b>500+</b><span>Happy customers</span></div>
+        <div class="t"><b>4.9/5</b><span>Average rating</span></div>
+        <div class="t"><b>2–4yr</b><span>Hair lifespan</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art reveal">
+      <div class="promo-badge"><b>-30%</b><span>Festive Sale</span></div>
+      <div class="portrait">
+        <img src="/img1.jpg" alt="">
+      </div>
+      <div class="float-card">
+      <!-- <span class="av"></span> -->
+        <div>
+          <b>Verified buyers</b>
+          <span class="stars">★★★★★</span> <span>24 reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="strip" aria-hidden="true">
+  <div class="track">
+    <span>Free Returns</span><span>Cuticle Aligned</span><span>Double Drawn</span><span>Tangle Free</span><span>Raw Human Hair</span><span>Nationwide Delivery</span>
+    <span>Free Returns</span><span>Cuticle Aligned</span><span>Double Drawn</span><span>Tangle Free</span><span>Raw Human Hair</span><span>Nationwide Delivery</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Shop by Category</span>
+      <h2>Find your perfect texture</h2>
+      <p>From silky bone straight to bouncy curls, every style in salon-grade human hair.</p>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="section" id="featured" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Bestsellers</span>
+      <h2>Featured this season</h2>
+      <p>Our most-loved pieces, hand-picked and ready to ship.</p>
+    </div>
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- PROMO BANNER
+<section class="wrap reveal" style="margin:10px auto">
+  <div class="promo">
+    <div>
+      <span class="eyebrow" style="color:var(--gold-2)">Limited Time</span>
+      <h2>Festive Luxe Sale — up to <em>30% off</em></h2>
+      <p>Treat yourself to double-drawn bundles and HD lace wigs at our best prices of the year. Offer ends soon.</p>
+      <a href="shop.html" class="btn btn-gold">Grab the deal</a>
+    </div>
+    <div class="countdown" id="countdown">
+      <div class="u"><b id="cd-d">02</b><span>Days</span></div>
+      <div class="u"><b id="cd-h">08</b><span>Hrs</span></div>
+      <div class="u"><b id="cd-m">45</b><span>Min</span></div>
+      <div class="u"><b id="cd-s">10</b><span>Sec</span></div>
+    </div>
+  </div>
+</section> -->
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Loved by thousands</span>
+      <h2>What our customers say</h2>
+    </div>
+    <div class="tslider reveal">
+      <div class="ttrack" id="ttrack"></div>
+      <div class="tdots" id="tdots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="wrap reveal" style="margin:10px auto">
+  <div class="news">
+    <span class="eyebrow" style="color:#3a2c0d">Join the list</span>
+    <h2>Get ₦10,000 off your first order</h2>
+    <p>Subscribe for early access to drops, styling tips and members-only pricing.</p>
+    <form id="newsForm">
+      <input type="email" required placeholder="Enter your email address" aria-label="Email address" />
+      <button class="btn btn-lg" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>We'd love to hear from you</h2>
+      <p>Questions about texture, length or care? Our hair consultants reply within hours.</p>
+    </div>
+    <div class="contact">
+      <div class="contact-info reveal">
+        <div class="cinfo"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 6h16v12H4z" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" stroke-linecap="round"/></svg></span><div><b>Email</b><span>care@derahairs.com</span></div></div>
+        <div class="cinfo"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h3l2 5-2 1c.8 2 2.6 3.8 4.6 4.6l1-2 5 2v3c0 1-.8 1.8-1.8 1.6C12.6 22 4 14 3.2 6.8 3 5.8 4 5 5 5Z" stroke-linejoin="round"/></svg></span><div><b>Phone / WhatsApp</b><span>+234 802 728 0248</span></div></div>
+        <div class="cinfo"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg></span><div><b>Showroom</b><span>10 Oku St, Uyo, Akwa Ibom</span></div></div>
+        <div class="map" aria-label="Map placeholder">
+          <svg viewBox="0 0 400 200" preserveAspectRatio="none"><defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="rgba(122,114,104,.18)" stroke-width="1"/></pattern></defs><rect width="400" height="200" fill="var(--soft)"/><rect width="400" height="200" fill="url(#grid)"/><path d="M0 120 Q120 90 200 130 T400 110" fill="none" stroke="var(--gold)" stroke-width="3" opacity=".5"/><path d="M60 0 V200 M260 0 V200" stroke="rgba(122,114,104,.2)" stroke-width="2"/></svg>
+          <div class="pin"><span><svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke-linejoin="round"/></svg> Uyo, Akwa Ibom</span></div>
+        </div>
+      </div>
+
+      <form  class="form-card reveal" id="contactForm">
+        <div class="row2">
+          <div class="field"><label>Full name</label><input name="name" required placeholder="Chizaram Divine" /></div>
+          <div class="field"><label>Email</label><input name="email" type="email" required placeholder="you@email.com" /></div>
+        </div>
+        <div class="field"><label>Subject</label>
+          <select name="subject"><option>Product question</option><option>Order &amp; delivery</option><option>Returns</option><option>Wholesale enquiry</option></select>
+        </div>
+        <div class="field"><label>Message</label><textarea name="message" required placeholder="How can we help?"></textarea></div>
+        <button class="btn btn-gold btn-block btn-lg" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <span class="brand"><span class="name">Dera-s Global <span>Hairmpire</span></span></span>
+        <p class="fabout">We're all about Luxury 100% virgin human hairs. No compromises, no tangles, just quality hairs and wigs that makes you look elegantly beautiful.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/deras_hairs?igsh=MW9ncW5ibTVmOTg4aQ==" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#contact" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.8c0-.5.3-.8.8-.8Z"/></svg></a>
+          <a href="https://www.tiktok.com/@dera_hairuyohairvendor?_r=1&_t=ZS-97jJWdYgxBB" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 4c.4 2 1.7 3.4 3.6 3.7v2.6c-1.3 0-2.5-.4-3.6-1.1v5.6A5.4 5.4 0 1 1 10.6 9.4v2.8a2.6 2.6 0 1 0 1.9 2.5V4H16Z"/></svg></a>
+          <a href="https://wa.me/message/A4LNZPBXUGKZB1" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Zm4.3 12.6c-.2.5-1 .9-1.5 1-.4 0-.9.1-2.7-.7-2.3-1-3.7-3.3-3.8-3.5-.1-.2-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.7 1.7c0 .2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.5 1.7 1 .8 1.7 1 2 1.2.2 0 .4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.3.1.4.2.5.3 0 .2 0 .8-.3 1.3Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="#testimonials" data-link>Reviews</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#testimonials" data-link>Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul id="footCats"></ul>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#contact" data-link>Contact Us</a></li>
+          <li><a href="index.html#contact" data-link>Delivery Service</a></li>
+          <li><a href="help.html#care">Hair Care Guide</a></li>
+          <li><a href="#contact" data-link>Track Order</a></li>
+          <li><a href="help.html#faq">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Dera-s Global Hairmpire. All rights reserved.</span>
+      <!-- <div class="fpay"><span>VISA</span><span>MASTERCARD</span><span>VERVE</span><span>TRANSFER</span><span>PAYPAL</span></div> -->
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+  <header>
+    <h3>
+      <svg viewBox="0 0 24 24" width="22" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 7h13l-1.2 9.3a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 4H3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Your Cart (<span id="cartCount">0</span>)
+    </h3>
+    <button class="close" id="cartClose" aria-label="Close cart"><svg viewBox="0 0 24 24" width="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg></button>
+  </header>
+  <div class="cart-items" id="cartItems"></div>
+  <footer id="cartFooter"></footer>
+</aside>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-bg" id="modalBg"></div>
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" id="modalClose" aria-label="Close"><svg viewBox="0 0 24 24" width="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg></button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- TOASTS + SCROLL TOP -->
+<div class="toasts" id="toasts"></div>
+<button class="totop" id="totop" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Zm4.3 12.6c-.2.5-1 .9-1.5 1-.4 0-.9.1-2.7-.7-2.3-1-3.7-3.3-3.8-3.5-.1-.2-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.7 1.7c0 .2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.5 1.7 1 .8 1.7 1 2 1.2.2 0 .4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.3.1.4.2.5.3 0 .2 0 .8-.3 1.3Z"/></svg>
+</a>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ================================================================
+   YOUR BUSINESS SETTINGS — EDIT THESE
+   ================================================================ */
+const WHATSAPP_NUMBER='2348027280248'; // your WhatsApp number (international format, no + or spaces)
+const CONTACT_EMAIL='youremail@gmail.com'; // <-- where contact-form + newsletter messages go (formsubmit.co)
+const waFloatEl=document.getElementById('waFloat');
+if(waFloatEl)waFloatEl.href='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent('Hello Dera-s Global Hairmpire! I have an enquiry.');
+
+/* =====================================================================
+   DERA HAIRS — app logic (vanilla JS)
+   ===================================================================== */
+const $  = (s,c=document)=>c.querySelector(s);
+const $$ = (s,c=document)=>[...c.querySelectorAll(s)];
+const NGN = n => '₦'+Number(n).toLocaleString('en-NG');
+
+/* ---------- SVG hair-shade swatch (the on-theme "product image") ---------- */
+function swatch(c1,c2,strand,seed=1){
+  const rnd=(i)=>((Math.sin(seed*99.7+i*12.3)*0.5+0.5));
+  let lines='';
+  for(let i=0;i<9;i++){
+    const x = 22 + i*46 + (rnd(i)-.5)*10;
+    const sway = 26 + rnd(i+3)*30;
+    const dir = rnd(i)>.5?1:-1;
+    lines += `<path d="M${x} -20 C ${x+sway*dir} 110, ${x-sway*dir} 230, ${x+sway*dir*.6} 420 C ${x-sway*dir} 540, ${x+sway*dir} 640, ${x} 720"
+      fill="none" stroke="${strand}" stroke-width="${1.4+rnd(i+5)*2}" stroke-linecap="round" opacity="${.18+rnd(i+1)*.4}"/>`;
+  }
+  return `<svg viewBox="0 0 440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="g${seed}" x1="0" y1="0" x2="0.3" y2="1">
+        <stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/>
+      </linearGradient>
+      <radialGradient id="sheen${seed}" cx="0.3" cy="0.18" r="0.9">
+        <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="440" height="560" fill="url(#g${seed})"/>
+    <g>${lines}</g>
+    <rect width="440" height="560" fill="url(#sheen${seed})"/>
+  </svg>`;
+}
+function avatar(c1,c2,seed){
+  return `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a${seed}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><rect width="64" height="64" fill="url(#a${seed})"/><circle cx="32" cy="26" r="11" fill="rgba(255,255,255,.85)"/><path d="M14 60c2-11 9-16 18-16s16 5 18 16" fill="rgba(255,255,255,.85)"/></svg>`;
+}
+
+/* ---------- shade palettes ---------- */
+const SH = {
+  jet:['#2a2a2e','#0b0b0d','#6b6b72'],
+  natural:['#3a312a','#16110d','#7a6b5c'],
+  brown:['#6b4a30','#2e1d12','#a9805a'],
+  honey:['#d9b06a','#9a6f33','#f1d79b'],
+  blonde:['#e7cf9b','#c2a05e','#fff0cf'],
+  burgundy:['#7a2230','#3a0f17','#b85666'],
+  auburn:['#9a4a2e','#5a2415','#cf8a63'],
+  ombre:['#1a1410','#caa15e','#e9cf95'],
+  ash:['#bcae9a','#8a7d68','#e4dccb'],
+  caramel:['#b07a3e','#6e451f','#e2b377']
+};
+
+const SUPABASE_URL = 'https://pozbfoeurtimlormocxg.supabase.co'; const SUPABASE_KEY = 'sb_publishable_f1eINrYwvCB-_QcNnbZrvw_zOqbhEWP'; const sbc = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+function mapCategory(row){ return {id:row.id, name:row.name, sub:row.sub, sh:SH[row.sh_key]||SH.natural, n:row.item_count||0, img:row.img}; } function mapProduct(row){ const price=Number(row.price)||0, old=row.old_price?Number(row.old_price):undefined; return { id:row.id, name:row.name, cat:row.category, texture:row.texture, price, old, rating:Number(row.rating)||0, reviews:Number(row.review_count)||0, sh:SH[row.sh_key]||SH.natural, desc:row.description||'', sold:Number(row.sold)||0, newish:!!row.is_new, lengths:(row.lengths&&row.lengths.length)?row.lengths:['14"','16"','18"','20"','22"','24"'], discount: old?Math.round((1-price/old)*100):0, img: row.image_url||null, vid: row.video_url||null, imgs: (row.gallery&&row.gallery.length)?row.gallery:undefined, }; }
+let CATEGORIES=[], PRODUCTS=[], REVIEWS={}; const DEFAULT_REVIEWS = [ {n:'Chiamaka E.',r:5,t:'Soft, full and zero shedding after two washes. Exactly as described.'}, {n:'Tola A.',r:5,t:'The lace melted perfectly. Got so many compliments at the wedding!'}, {n:'Ngozi M.',r:4,t:'Beautiful hair and fast delivery. Wish it came in a longer length.'}, ];
+async function loadCatalog(){ try{ const [catRes, prodRes, revRes] = await Promise.all([ sbc.from('categories').select('').order('sort_order'), sbc.from('products').select('').order('created_at',{ascending:false}), sbc.from('reviews').select('*'), ]); if(catRes.error) console.error('categories error:', catRes.error); if(prodRes.error) console.error('products error:', prodRes.error); CATEGORIES = (catRes.data||[]).map(mapCategory); PRODUCTS = (prodRes.data||[]).map(mapProduct); REVIEWS = {}; (revRes.data||[]).forEach(r=>{ if(!REVIEWS[r.product_id]) REVIEWS[r.product_id]=[]; REVIEWS[r.product_id].push({n:r.customer_name, r:r.rating, t:r.review_text}); }); const validIds = new Set(PRODUCTS.map(p=>p.id)); cart = cart.filter(c=>validIds.has(c.id)); wishlist = wishlist.filter(id=>validIds.has(id)); save(); }catch(err){ console.error('Could not load catalog from Supabase', err); } }
+
+function media(p,seed,fallback){
+  if(p.vid) return `<video src="${p.vid}"${p.img?` poster="${p.img}"`:''} autoplay muted loop playsinline preload="metadata"></video>`;
+  if(p.img) return `<img src="${p.img}" alt="${p.name}" loading="lazy">`;
+  return fallback;
+}
+
+/* ---------- state ---------- */
+let cart = load('dera_cart', []);
+let wishlist = load('dera_wishlist', []);
+let activeCat = 'all';
+
+function load(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch(e){return f}}
+function save(){localStorage.setItem('dera_cart',JSON.stringify(cart));localStorage.setItem('dera_wishlist',JSON.stringify(wishlist));}
+
+/* ---------- toast ---------- */
+function toast(msg,sub){
+  const wrap=$('#toasts');
+  const t=document.createElement('div');t.className='toast';
+  t.innerHTML=`<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 13 4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>${msg}</b>${sub?`<div style="font-size:.78rem;opacity:.85">${sub}</div>`:''}</div>`;
+  wrap.appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));
+  setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),400)},2600);
+}
+
+/* ---------- stars ---------- */
+const starStr = r => '★★★★★'.slice(0,Math.round(r))+'☆☆☆☆☆'.slice(0,5-Math.round(r));
+
+/* ---------- product card ---------- */
+function card(p,i){
+  const inWish = wishlist.includes(p.id);
+  return `<article class="card" data-id="${p.id}">
+    <div class="thumb" data-open="${p.id}">
+      ${p.discount?`<span class="tag">-${p.discount}%</span>`:''}
+      ${p.newish?`<span class="tag new" style="${p.discount?'top:42px':''}">New</span>`:''}
+      <button class="wish ${inWish?'active':''}" data-wish="${p.id}" aria-label="Add to wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.6-9.3-9.1C1.2 8 2.6 5 5.6 5c2 0 3.3 1.2 4.4 2.6C11.1 6.2 12.4 5 14.4 5c3 0 4.4 3 2.9 5.9C19 15.4 12 20 12 20Z" stroke-linejoin="round"/></svg>
+      </button>
+      ${media(p,i+1,swatch(p.sh[0],p.sh[1],p.sh[2],i+1))}
+      <div class="hover-actions"><button class="qv" data-open="${p.id}">Quick View</button></div>
+    </div>
+    <div class="body">
+      <span class="cat">${catName(p.cat)} · ${p.texture}</span>
+      <h3 data-open="${p.id}">${p.name}</h3>
+      <div class="rate"><span class="stars">${starStr(p.rating)}</span> ${p.rating} <span>(${p.reviews})</span></div>
+      <div class="price"><span class="now">${NGN(p.price)}</span>${p.old?`<span class="was">${NGN(p.old)}</span>`:''}${p.discount?`<span class="off">-${p.discount}%</span>`:''}</div>
+      <button class="add" data-add="${p.id}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h13l-1.2 9.3a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 4H3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Add to Cart
+      </button>
+    </div>
+  </article>`;
+}
+const catName = id => (CATEGORIES.find(c=>c.id===id)||{}).name || id;
+
+/* ---------- render grids ---------- */
+function renderFeatured(){
+  if(!$('#featuredGrid'))return;
+  $('#featuredGrid').innerHTML = PRODUCTS.filter(p=>p.discount>=25).slice(0,8).map(card).join('');
+}
+function renderNew(){
+  if(!$('#newGrid'))return;
+  $('#newGrid').innerHTML = PRODUCTS.filter(p=>p.newish).slice(0,4).map(card).join('');
+}
+function renderCategories(){
+  const _cg=$('#catGrid'); if(_cg) _cg.innerHTML = CATEGORIES.map((c,i)=>`
+    <div class="cat-card" data-cat="${c.id}">
+      <div class="bg"><img src="${c.img}" loading="lazy"></div>
+      <div class="veil"></div>
+      <span class="count">${c.n} items</span>
+      <div class="meta"><b>${c.name}</b><span>${c.sub} <span class="arrow">→</span></span></div>
+    </div>`).join('');
+  // footer cats + filters
+  const _fc=$('#footCats'); if(_fc) _fc.innerHTML = CATEGORIES.slice(0,5).map(c=>`<li><a href="#shop" data-cat="${c.id}">${c.name}</a></li>`).join('');
+  const _cf=$('#catFilters'); if(_cf) _cf.innerHTML = `<button class="chip active" data-filter="all">All</button>`+
+    CATEGORIES.map(c=>`<button class="chip" data-filter="${c.id}">${c.name}</button>`).join('');
+  // selects
+  const _tf=$('#textureFilter'); if(_tf) _tf.innerHTML = `<option value="all">All textures</option>`+TEXTURES.map(t=>`<option value="${t}">${t}</option>`).join('');
+  const _lf=$('#lengthFilter'); if(_lf) _lf.innerHTML = `<option value="all">All lengths</option>`+LENGTHS.map(l=>`<option value="${l}">${l}</option>`).join('');
+}
+
+let searchTerm='';
+function renderShop(){
+  if(!$('#shopGrid'))return;
+  const tex=$('#textureFilter').value, len=$('#lengthFilter').value, pr=$('#priceFilter').value, sort=$('#sortBy').value;
+  let list=[...PRODUCTS];
+  if(activeCat!=='all') list=list.filter(p=>p.cat===activeCat);
+  if(tex!=='all') list=list.filter(p=>p.texture===tex);
+  if(len!=='all') list=list.filter(p=>p.lengths.includes(len));
+  if(pr!=='all'){const[a,b]=pr.split('-').map(Number);list=list.filter(p=>p.price>=a&&p.price<=b);}
+  if(searchTerm){const q=searchTerm.toLowerCase();list=list.filter(p=>(p.name+' '+p.texture+' '+catName(p.cat)).toLowerCase().includes(q));}
+  if(sort==='low')list.sort((a,b)=>a.price-b.price);
+  else if(sort==='high')list.sort((a,b)=>b.price-a.price);
+  else if(sort==='best')list.sort((a,b)=>b.sold-a.sold);
+  else if(sort==='newest')list.sort((a,b)=>(b.newish?1:0)-(a.newish?1:0));
+
+  const grid=$('#shopGrid');
+  if(!list.length){
+    grid.innerHTML=`<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" stroke-linecap="round"/></svg><p>No products match your filters${searchTerm?` for "<b>${searchTerm}</b>"`:''}.</p><button class="btn btn-outline" id="clearFilters" style="margin-top:14px">Clear filters</button></div>`;
+    return;
+  }
+  grid.innerHTML=list.map(card).join('');
+}
+
+/* ---------- product lookup ---------- */
+const find = id => PRODUCTS.find(p=>p.id===id);
+
+/* ---------- cart ---------- */
+function addToCart(id,opts={}){
+  const p=find(id);if(!p)return;
+  const length=opts.length||p.lengths[Math.floor(p.lengths.length/2)];
+  const texture=opts.texture||p.texture;
+  const qty=opts.qty||1;
+  const key=`${id}|${length}|${texture}`;
+  const ex=cart.find(c=>c.key===key);
+  if(ex)ex.qty+=qty; else cart.push({key,id,length,texture,qty});
+  save();updateCart();
+  toast('Added to cart',`${p.name} · ${length}`);
+}
+function removeItem(key){cart=cart.filter(c=>c.key!==key);save();updateCart();}
+function setQty(key,d){const it=cart.find(c=>c.key===key);if(!it)return;it.qty+=d;if(it.qty<1)return removeItem(key);save();updateCart();}
+function cartTotal(){return cart.reduce((s,c)=>s+find(c.id).price*c.qty,0);}
+function cartCount(){return cart.reduce((s,c)=>s+c.qty,0);}
+
+const FREE_SHIP=150000, SHIP_FEE=5000;
+function updateCart(){
+  const count=cartCount();
+  ['cartBadge','cartCount'].forEach(id=>$('#'+id).textContent=count);
+  $('#cartBadge').classList.toggle('show',count>0);
+
+  const box=$('#cartItems'), foot=$('#cartFooter');
+  if(!cart.length){
+    box.innerHTML=`<div class="cart-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 7h13l-1.2 9.3a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 4H3" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>Your cart is empty</b></p><p style="font-size:.86rem">Add some luxury to it.</p><button class="btn btn-gold" id="emptyShop" style="margin-top:16px">Start shopping</button></div>`;
+    foot.innerHTML='';return;
+  }
+  box.innerHTML=cart.map((c,i)=>{
+    const p=find(c.id);
+    return `<div class="citem">
+      <div class="img">${media(p,500+i,swatch(p.sh[0],p.sh[1],p.sh[2],500+i))}</div>
+      <div class="info">
+        <h4>${p.name}</h4>
+        <div class="v">${c.length} · ${c.texture}</div>
+        <div class="p">${NGN(p.price*c.qty)}</div>
+        <div class="qty">
+          <button data-q="${c.key}" data-d="-1">−</button><span>${c.qty}</span><button data-q="${c.key}" data-d="1">+</button>
+        </div>
+        <div><button class="rm" data-rm="${c.key}">Remove</button></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const sub=cartTotal();
+  const remaining=Math.max(0,FREE_SHIP-sub);
+  const ship=sub>=FREE_SHIP?0:SHIP_FEE;
+  const pct=Math.min(100,sub/FREE_SHIP*100);
+  foot.innerHTML=`
+    <div class="ship-note">
+      <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>
+      ${remaining>0?`Add <b>${NGN(remaining)}</b> for FREE delivery`:`You've unlocked FREE delivery! 🎉`}
+    </div>
+    <div class="ship-bar"><i style="width:${pct}%"></i></div>
+    <div class="crow"><span>Subtotal</span><span>${NGN(sub)}</span></div>
+    <div class="crow"><span>Shipping est.</span><span>${ship?NGN(ship):'Free'}</span></div>
+    <div class="crow total"><span>Total</span><span>${NGN(sub+ship)}</span></div>
+    <button class="btn btn-gold btn-block btn-lg" id="checkoutBtn">Checkout</button>`;
+}
+
+/* ---------- wishlist ---------- */
+function toggleWish(id){
+  const i=wishlist.indexOf(id);
+  if(i>-1){wishlist.splice(i,1);toast('Removed from wishlist');}
+  else{wishlist.push(id);toast('Saved to wishlist','♥');}
+  save();updateWishUI();
+}
+function updateWishUI(){
+  $('#wishBadge').textContent=wishlist.length;
+  $('#wishBadge').classList.toggle('show',wishlist.length>0);
+  $$('.wish').forEach(b=>b.classList.toggle('active',wishlist.includes(b.dataset.wish)));
+}
+
+/* ---------- product details / quick view modal ---------- */
+function openProduct(id){
+  const p=find(id);if(!p)return;
+  const shades=[p.sh, SH.honey, SH.burgundy, SH.ash];
+  const slides = (p.imgs && p.imgs.length) ? p.imgs.map(u=> (u.endsWith('.mp4') || u.endsWith('.mov'))?`<video src="${u}" autoplay muted loop playsinline></video>`:`<img src="${u}" loading="lazy">`) :
+  [0, 1, 2, 3].map(i => i === 0 ? media(p, 700, swatch(shades[0][0], shades[0][1], shades[0][2], 700)) :
+    swatch(shades[i][0], shades[i][1], shades[i][2], 700 + i));
+if (p.vid && p.imgs && p.imgs.length) slides.unshift(`<video src="${p.vid}" autoplay muted loop playsinline></video>`);
+  const reviews=REVIEWS[id]||DEFAULT_REVIEWS;
+  let selLen=p.lengths[Math.floor(p.lengths.length/2)], selTex=p.texture, qty=1, selImg=0;
+
+  function render(){
+    $('#modalContent').innerHTML=`
+    <div class="pd">
+      <div class="pd-gallery">
+        <div class="pd-main" id="pdMain">${slides[selImg]}</div>
+        <div class="pd-thumbs">${slides.map((s,i)=>`<button class="${i===selImg?'active':''}" data-img="${i}">${s}</button>`).join('')}</div>
+      </div>
+      <div class="pd-info">
+        <span class="cat">${catName(p.cat)}</span>
+        <h2>${p.name}</h2>
+        <div class="rate"><span class="stars">${starStr(p.rating)}</span> ${p.rating} · ${p.reviews} reviews · <b style="color:#2f9e6f">${p.sold.toLocaleString()} sold</b></div>
+        <div class="pd-price"><span class="now">${NGN(p.price)}</span>${p.old?`<span class="was">${NGN(p.old)}</span>`:''}${p.discount?`<span class="off">Save ${p.discount}%</span>`:''}</div>
+        <p class="pd-desc">${p.desc}</p>
+
+        <div class="opt-group">
+          <div class="lbl">Hair length <span id="lenLbl">${selLen}</span></div>
+          <div class="opts" id="lenOpts">${p.lengths.map(l=>`<button class="opt ${l===selLen?'active':''}" data-len="${l}">${l}</button>`).join('')}</div>
+        </div>
+        <div class="opt-group">
+          <div class="lbl">Hair texture <span id="texLbl">${selTex}</span></div>
+          <div class="opts" id="texOpts">${TEXTURES.map(t=>`<button class="opt ${t===selTex?'active':''}" data-tex="${t}">${t}</button>`).join('')}</div>
+        </div>
+
+        <div class="pd-actions">
+          <div class="qty"><button id="qtyMinus">−</button><span id="qtyVal">1</span><button id="qtyPlus">+</button></div>
+          <button class="btn btn-ink" style="flex:1;min-width:150px" id="pdAdd">Add to Cart</button>
+          <button class="btn btn-gold" style="flex:1;min-width:150px" id="pdBuy">Buy Now</button>
+        </div>
+
+        <div class="specs">
+          <h4>Specifications</h4>
+          <dl>
+            <dt>Hair type</dt><dd>100% Virgin Human Hair</dd>
+            <dt>Texture</dt><dd id="specTex">${selTex}</dd>
+            <dt>Length</dt><dd id="specLen">${selLen}</dd>
+            <dt>Lace / Cap</dt><dd>HD Transparent Lace</dd>
+            <dt>Density</dt><dd>180% Full</dd>
+            <dt>Origin</dt><dd>Single-donor, cuticle aligned</dd>
+          </dl>
+        </div>
+
+        <div class="reviews">
+          <h4>Customer reviews</h4>
+          ${reviews.map(rv=>`<div class="review"><div class="top"><b>${rv.n}</b><span class="stars">${starStr(rv.r)}</span></div><p>${rv.t}</p></div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+    bind();
+  }
+  function bind(){
+    $$('#lenOpts .opt').forEach(b=>b.onclick=()=>{selLen=b.dataset.len;$('#lenLbl').textContent=selLen;$('#specLen').textContent=selLen;$$('#lenOpts .opt').forEach(x=>x.classList.toggle('active',x===b));});
+    $$('#texOpts .opt').forEach(b=>b.onclick=()=>{selTex=b.dataset.tex;$('#texLbl').textContent=selTex;$('#specTex').textContent=selTex;$$('#texOpts .opt').forEach(x=>x.classList.toggle('active',x===b));});
+    $$('.pd-thumbs button').forEach(b=>b.onclick=()=>{selImg=+b.dataset.img;$('#pdMain').innerHTML=slides[selImg];$$('.pd-thumbs button').forEach(x=>x.classList.toggle('active',x===b));});
+    $('#qtyMinus').onclick=()=>{qty=Math.max(1,qty-1);$('#qtyVal').textContent=qty;};
+    $('#qtyPlus').onclick=()=>{qty++;$('#qtyVal').textContent=qty;};
+    $('#pdAdd').onclick=()=>{addToCart(p.id,{length:selLen,texture:selTex,qty});};
+    $('#pdBuy').onclick=()=>{addToCart(p.id,{length:selLen,texture:selTex,qty});closeModal();openCart();};
+  }
+  render();
+  openModal();
+}
+
+/* ---------- checkout ---------- */
+function openCheckout(){
+  if(!cart.length){toast('Your cart is empty');return;}
+  closeCart();
+  const sub=cartTotal();
+  const ship=sub>=FREE_SHIP?0:SHIP_FEE;
+  $('#modalContent').innerHTML=`
+  <div class="checkout">
+    <h2>Checkout</h2>
+    <p class="sub">Fill in your details — your order will open in WhatsApp for us to confirm.</p>
+    <div class="checkout-grid">
+      <form id="coForm">
+        <div class="co-block">
+          <h3><i>1</i> Customer information</h3>
+          <div class="row2">
+            <div class="field"><label>First name</label><input required placeholder="Adaeze"></div>
+            <div class="field"><label>Last name</label><input required placeholder="Okonkwo"></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+            <div class="field"><label>Phone</label><input required placeholder="+234…"></div>
+          </div>
+        </div>
+        <div class="co-block">
+          <h3><i>2</i> Delivery address</h3>
+          <div class="field"><label>Street address</label><input required placeholder="14 Adeola Odeku Street"></div>
+          <div class="row2">
+            <div class="field"><label>City</label><input required placeholder="Lagos"></div>
+            <div class="field"><label>State</label><input required placeholder="Lagos State"></div>
+          </div>
+        </div>
+        <div class="co-block">
+          <h3><i>3</i> Payment method</h3>
+          <div class="pay-opts" id="payOpts">
+            <label class="pay active"><span class="dot"></span><input type="radio" name="pay" hidden checked><div><b>Card payment</b><span>Visa, Mastercard, Verve</span></div></label>
+            <label class="pay"><span class="dot"></span><input type="radio" name="pay" hidden><div><b>Bank transfer</b><span>Pay to our account, instant confirm</span></div></label>
+            <label class="pay"><span class="dot"></span><input type="radio" name="pay" hidden><div><b>Cash on delivery</b><span>Pay when your order arrives</span></div></label>
+          </div>
+        </div>
+        <button class="btn btn-gold btn-block btn-lg" type="submit">Order on WhatsApp · ${NGN(sub+ship)}</button>
+      </form>
+
+      <aside class="summary">
+        <h3>Order summary</h3>
+        ${cart.map((c,i)=>{const p=find(c.id);return `<div class="sitem"><div class="ti">${media(p,800+i,swatch(p.sh[0],p.sh[1],p.sh[2],800+i))}</div><div class="n">${p.name}<span>${c.length} · ${c.texture} · Qty ${c.qty}</span></div><div>${NGN(p.price*c.qty)}</div></div>`}).join('')}
+        <div class="crow" style="margin-top:14px"><span>Subtotal</span><span>${NGN(sub)}</span></div>
+        <div class="crow"><span>Shipping</span><span>${ship?NGN(ship):'Free'}</span></div>
+        <div class="crow total"><span>Total</span><span>${NGN(sub+ship)}</span></div>
+      </aside>
+    </div>
+  </div>`;
+  openModal();
+  $$('#payOpts .pay').forEach(el=>el.onclick=()=>{$$('#payOpts .pay').forEach(x=>x.classList.remove('active'));el.classList.add('active');el.querySelector('input').checked=true;});
+  $('#coForm').onsubmit=e=>{
+    e.preventDefault();
+    const f=e.target, v=[...f.querySelectorAll('input:not([type=radio])')].map(i=>i.value.trim());
+    const payEl=$('#payOpts .pay.active b'); const pay=payEl?payEl.textContent:'Not stated';
+    const sub2=cartTotal(), ship2=sub2>=FREE_SHIP?0:SHIP_FEE;
+    let m='Hello Dera-s Global Hairmpire! I would like to place an order:\n\n';
+    cart.forEach((c,i)=>{const p=find(c.id);m+=(i+1)+'. '+p.name+'\n   '+c.length+' \u00b7 '+c.texture+' \u00b7 Qty '+c.qty+' \u2014 '+NGN(p.price*c.qty)+'\n';});
+    m+='\nSubtotal: '+NGN(sub2)+'\nShipping: '+(ship2?NGN(ship2):'Free')+'\n*TOTAL: '+NGN(sub2+ship2)+'*\n\n';
+    m+='My details:\nName: '+v[0]+' '+v[1]+'\nPhone: '+v[3]+'\nEmail: '+v[2]+'\nAddress: '+v[4]+', '+v[5]+', '+v[6]+'\nPreferred payment: '+pay;
+    window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(m),'_blank');
+    closeModal();cart=[];save();updateCart();
+    toast('Order sent to WhatsApp','We\'ll confirm it with you there shortly');
+  };
+  /* ===== PAYSTACK (optional \u2014 add card payments later) =====
+     1. Create a free business at paystack.com and copy your PUBLIC key (pk_live_...)
+     2. Add to <head>:  <script src="https://js.paystack.co/v2/inline.js"><\/script>
+     3. Inside this submit handler, instead of opening WhatsApp:
+        new PaystackPop().newTransaction({
+          key:'pk_live_XXXX', email:v[2], amount:(sub2+ship2)*100, // kobo
+          onSuccess:t=>{ toast('Payment received','Ref: '+t.reference); },
+          onCancel:()=>{}
+        });
+     Payments appear instantly in your Paystack dashboard. */
+}
+
+/* ---------- modal / drawer controls ---------- */
+const overlay=$('#overlay');
+function openModal(){$('#modal').classList.add('show');overlay.classList.add('show');document.body.style.overflow='hidden';$('#modalBox').scrollTop=0;}
+function closeModal(){$('#modal').classList.remove('show');if(!$('#cartDrawer').classList.contains('open')&&!$('#mobileMenu').classList.contains('open'))overlay.classList.remove('show');document.body.style.overflow='';}
+function openCart(){$('#cartDrawer').classList.add('open');overlay.classList.add('show');document.body.style.overflow='hidden';}
+function closeCart(){$('#cartDrawer').classList.remove('open');if(!$('#modal').classList.contains('show')&&!$('#mobileMenu').classList.contains('open'))overlay.classList.remove('show');document.body.style.overflow='';}
+function openMobile(){$('#mobileMenu').classList.add('open');overlay.classList.add('show');}
+function closeMobile(){$('#mobileMenu').classList.remove('open');if(!$('#modal').classList.contains('show')&&!$('#cartDrawer').classList.contains('open'))overlay.classList.remove('show');}
+
+/* ---------- global event delegation ---------- */
+document.addEventListener('click',e=>{
+  const t=e.target;
+  const add=t.closest('[data-add]'); if(add){addToCart(add.dataset.add);return;}
+  const open=t.closest('[data-open]'); if(open){openProduct(open.dataset.open);return;}
+  const wish=t.closest('[data-wish]'); if(wish){toggleWish(wish.dataset.wish);return;}
+  const catCard=t.closest('[data-cat]'); if(catCard){goToCat(catCard.dataset.cat);return;}
+  const filter=t.closest('[data-filter]'); if(filter){activeCat=filter.dataset.filter;$$('#catFilters .chip').forEach(c=>c.classList.toggle('active',c===filter));renderShop();return;}
+  const q=t.closest('[data-q]'); if(q){runSearch(q.dataset.q);return;}
+  // cart qty / remove
+  if(t.dataset.q){setQty(t.dataset.q,+t.dataset.d);return;}
+  if(t.dataset.rm){removeItem(t.dataset.rm);return;}
+  if(t.id==='checkoutBtn'){openCheckout();return;}
+  if(t.id==='emptyShop'){closeCart();const sh=document.getElementById('shop');if(sh)sh.scrollIntoView({behavior:'smooth'});else location.href='shop.html';return;}
+  if(t.id==='clearFilters'){activeCat='all';searchTerm='';$('#textureFilter').value='all';$('#lengthFilter').value='all';$('#priceFilter').value='all';$$('#catFilters .chip').forEach(c=>c.classList.toggle('active',c.dataset.filter==='all'));renderShop();return;}
+});
+
+function goToCat(id){
+  if(!$('#shopGrid')){location.href='shop.html?cat='+encodeURIComponent(id);return;}
+  activeCat=id;
+  $$('#catFilters .chip').forEach(c=>c.classList.toggle('active',c.dataset.filter===id));
+  renderShop();
+  document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+}
+
+/* ---------- search ---------- */
+function runSearch(q){
+  searchTerm=q.trim();
+  if(!$('#shopGrid')){location.href='shop.html'+(searchTerm?('?q='+encodeURIComponent(searchTerm)):'');return;}
+  $('#searchInput').value=searchTerm;
+  $('#searchbar').classList.remove('open');
+  activeCat='all';
+  $$('#catFilters .chip').forEach(c=>c.classList.toggle('active',c.dataset.filter==='all'));
+  renderShop();
+  document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+  if(searchTerm) toast(`Showing results for "${searchTerm}"`);
+}
+$('#searchForm').onsubmit=e=>{e.preventDefault();runSearch($('#searchInput').value);};
+
+/* ---------- header buttons ---------- */
+$('#cartBtn').onclick=openCart;
+$('#cartClose').onclick=closeCart;
+$('#modalClose').onclick=closeModal;
+$('#modalBg').onclick=closeModal;
+overlay.onclick=()=>{closeCart();closeModal();closeMobile();};
+$('#searchToggle').onclick=()=>{const sb=$('#searchbar');sb.classList.toggle('open');if(sb.classList.contains('open'))setTimeout(()=>$('#searchInput').focus(),200);};
+$('#hamb').onclick=openMobile;
+$('#closeMobile').onclick=closeMobile;
+$('#wishBtn').onclick=()=>{if(!wishlist.length){toast('Your wishlist is empty','Tap the heart on any product');return;}if(!$('#shopGrid')){location.href='shop.html?wish=1';return;}activeCat='all';searchTerm='';$('#shopGrid').innerHTML=PRODUCTS.filter(p=>wishlist.includes(p.id)).map(card).join('');document.getElementById('shop').scrollIntoView({behavior:'smooth'});toast('Showing your wishlist','♥ '+wishlist.length+' items');};
+$('#accountBtn').onclick=()=>toast('Account','Sign in coming soon');
+$$('#mobileMenu nav a').forEach(a=>a.onclick=closeMobile);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeModal();closeMobile();$('#searchbar').classList.remove('open');}});
+
+/* ---------- shop filter listeners ---------- */
+['textureFilter','lengthFilter','priceFilter','sortBy'].forEach(id=>{const el=$('#'+id);if(el)el.addEventListener('change',renderShop);});
+
+/* ---------- theme ---------- */
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  localStorage.setItem('dera_theme',t);
+  const dark=t==='dark';
+  $('#iconMoon').innerHTML = dark
+    ? '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19" stroke-linecap="round"/>'
+    : '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round"/>';
+  $('#themeToggleM').textContent = dark?'Light mode':'Dark mode';
+}
+function toggleTheme(){setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');}
+$('#themeToggle').onclick=toggleTheme;
+$('#themeToggleM').onclick=()=>{toggleTheme();};
+setTheme(localStorage.getItem('dera_theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+
+/* ---------- testimonials slider ---------- */
+const TST=[
+  {n:'Amara N.',c:'Abuja',r:5,t:'I have ordered from everywhere and Dera-s Global Hairmpire is in a league of its own. The bundles are thick to the very tip, no thin ends.',sh:SH.burgundy},
+  {n:'Zainab K.',c:'Lagos',r:5,t:'My HD wig looked completely natural. Strangers asked if it was my real hair. That has never happened before!',sh:SH.honey},
+  {n:'Ifeoma O.',c:'Port Harcourt',r:5,t:'Two years later and this hair still looks brand new. Worth every naira. I will never shop anywhere else.',sh:SH.auburn},
+  {n:'Bisi A.',c:'Ibadan',r:4,t:'Soft, full and delivered in two days. Customer care helped me pick the perfect length over WhatsApp.',sh:SH.caramel},
+];
+let ti=0;
+function renderTestimonials(){
+  if(!$('#ttrack'))return;
+  $('#ttrack').innerHTML=TST.map(s=>`<div class="tslide"><div class="tcard"><div class="stars">${starStr(s.r)}</div><blockquote>“${s.t}”</blockquote><div class="who"><span class="av">${avatar(s.sh[0],s.sh[1],TST.indexOf(s))}</span><div><b>${s.n}</b><span>${s.c}, Nigeria</span></div></div></div></div>`).join('');
+  $('#tdots').innerHTML=TST.map((_,i)=>`<button data-t="${i}" class="${i===0?'active':''}"></button>`).join('');
+  $$('#tdots button').forEach(b=>b.onclick=()=>{ti=+b.dataset.t;slideT();});
+}
+function slideT(){if(!$('#ttrack'))return;$('#ttrack').style.transform=`translateX(-${ti*100}%)`;$$('#tdots button').forEach((b,i)=>b.classList.toggle('active',i===ti));}
+let tTimer=setInterval(()=>{ti=(ti+1)%TST.length;slideT();},5000);
+
+/* ---------- countdown ---------- */
+let end=Date.now()+ (2*86400+8*3600+45*60+10)*1000;
+setInterval(()=>{
+  if(!$('#cd-d'))return;
+  let d=Math.max(0,end-Date.now());
+  const D=Math.floor(d/86400000),H=Math.floor(d/3600000)%24,M=Math.floor(d/60000)%60,S=Math.floor(d/1000)%60;
+  const z=n=>String(n).padStart(2,'0');
+  $('#cd-d').textContent=z(D);$('#cd-h').textContent=z(H);$('#cd-m').textContent=z(M);$('#cd-s').textContent=z(S);
+},1000);
+
+/* ---------- forms ---------- */
+if($('#newsForm'))$('#newsForm').onsubmit=async e=>{
+  e.preventDefault();
+  const inp=e.target.querySelector('input[type="email"]');
+  const email=inp.value;
+  e.target.reset();
+  toast('You are on the list','Use DERA10 for \u20a610,000 off your first order');
+  try{
+    await fetch('https://formsubmit.co/ajax/'+CONTACT_EMAIL,{method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({email:email,_subject:'New newsletter subscriber',_template:'table'})});
+  }catch(_){}
+};
+if($('#contactForm'))$('#contactForm').onsubmit=async e=>{
+  e.preventDefault();
+  const f=e.target, btn=f.querySelector('button[type="submit"]');
+  const data={name:f.name.value,email:f.email.value,subject:f.subject.value,message:f.message.value,
+    _subject:'Website message: '+f.subject.value,_template:'table'};
+  btn.disabled=true; const old=btn.textContent; btn.textContent='Sending\u2026';
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/'+CONTACT_EMAIL,{method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+    if(!r.ok) throw 0;
+    f.reset(); toast('Message sent','We\'ll reply within a few hours');
+  }catch(_){toast('Could not send','Please check your connection and try again');}
+  btn.disabled=false; btn.textContent=old;
+};
+
+/* ---------- scroll behaviours ---------- */
+const header=$('.site'),totop=$('#totop');
+addEventListener('scroll',()=>{
+  const y=scrollY;
+  header.classList.toggle('scrolled',y>10);
+  totop.classList.toggle('show',y>500);
+},{passive:true});
+totop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+/* ---------- smooth scroll for nav anchors ---------- */
+$$('a[data-link]').forEach(a=>a.addEventListener('click',e=>{
+  const id=a.getAttribute('href');
+  if(id&&id.startsWith('#')){e.preventDefault();const el=document.querySelector(id);if(el){const top=el.getBoundingClientRect().top+scrollY-66;scrollTo({top,behavior:'smooth'});}}
+}));
+
+/* ---------- reveal on scroll + count up ---------- */
+const io=new IntersectionObserver((es)=>{
+  es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');
+    if(en.target.matches('[data-count]'))countUp(en.target);
+    io.unobserve(en.target);}});
+},{threshold:.15});
+function countUp(el){
+  const target=+el.dataset.count;let cur=0;const step=target/60;
+  const tick=()=>{cur+=step;if(cur>=target){el.textContent=target>=1000?Math.floor(target/1000)+'k+':target;return;}el.textContent=(cur>=1000?(cur/1000).toFixed(1)+'k':Math.floor(cur));requestAnimationFrame(tick);};
+  tick();
+}
+
+/* ---------- init ---------- */
+async function init(){
+  await loadCatalog();
+  renderCategories();
+  renderFeatured();
+  renderNew();
+  renderTestimonials();
+  updateCart();
+  updateWishUI();
+  $('#yr').textContent=new Date().getFullYear();
+  const aa=$('#aboutArt'); if(aa) aa.innerHTML=swatch(SH.brown[0],SH.brown[1],SH.honey[2],7);
+  if($('#shopGrid')){
+    const qs=new URLSearchParams(location.search);
+    const qc=qs.get('cat'); if(qc){activeCat=qc;$$('#catFilters .chip').forEach(c=>c.classList.toggle('active',c.dataset.filter===qc));}
+    const qq=qs.get('q'); if(qq){searchTerm=qq;const si=$('#searchInput');if(si)si.value=qq;}
+    const so=qs.get('sort'); if(so&&$('#sortBy'))$('#sortBy').value=so;
+    renderShop();
+    if(qs.get('wish')&&wishlist.length){$('#shopGrid').innerHTML=PRODUCTS.filter(p=>wishlist.includes(p.id)).map(card).join('');toast('Showing your wishlist','\u2665 '+wishlist.length+' items');}
+  }
+  $$('.reveal,[data-count]').forEach(el=>io.observe(el));
+  setTimeout(()=>$('#preloader').classList.add('hide'),550);
+}
+init();
+</script>
+</body>
+</html>
