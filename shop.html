@@ -838,6 +838,7 @@ footer ul a:hover{color:var(--gold-2)}
 <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Zm4.3 12.6c-.2.5-1 .9-1.5 1-.4 0-.9.1-2.7-.7-2.3-1-3.7-3.3-3.8-3.5-.1-.2-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.7 1.7c0 .2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.5 1.7 1 .8 1.7 1 2 1.2.2 0 .4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.3.1.4.2.5.3 0 .2 0 .8-.3 1.3Z"/></svg>
 </a>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* ================================================================
    YOUR BUSINESS SETTINGS — EDIT THESE
@@ -898,7 +899,7 @@ const SH = {
 };
 
 /* ---------- categories ---------- */
-const CATEGORIES = [
+let CATEGORIES = [
   {id:'wigs', name:'Wigs', sub:'HD lace & glueless', sh:SH.natural, n:24},
   {id:'bundles', name:'Human Hair Bundles', sub:'Double drawn wefts', sh:SH.jet, n:38},
   {id:'frontals', name:'Frontals', sub:'13×4 & 13×6 HD lace', sh:SH.brown, n:16},
@@ -910,14 +911,14 @@ const CATEGORIES = [
 ];
 
 /* ---------- products ---------- */
-const TEXTURES = ['Bone Straight','Body Wave','Deep Curly','Kinky Straight','Water Wave','Loose Wave'];
-const LENGTHS  = ['12"','14"','16"','18"','20"','22"','24"','26"','30"'];
+let TEXTURES = ['Bone Straight','Body Wave','Deep Curly','Kinky Straight','Water Wave','Loose Wave'];
+let LENGTHS  = ['12"','14"','16"','18"','20"','22"','24"','26"','30"'];
 
 const P = (id,name,cat,texture,price,old,rating,reviews,sh,desc,sold,newish=false,lengths=['14"','16"','18"','20"','22"','24"'])=>(
   {id,name,cat,texture,price,old,rating,reviews,sh,desc,sold,newish,lengths,
    discount: old?Math.round((1-price/old)*100):0});
 
-const PRODUCTS = [
+let PRODUCTS = [
   P('p1','Raw Vietnamese Bone Straight','bone','Bone Straight',128000,180000,4.9,212,SH.natural,'Sleek, glassy and impossibly soft. Single-donor raw hair that holds a sleek press and bounces back after every wash.',940,true,['14"','16"','18"','20"','22"','24"','26"','30"']),
   P('p2','HD Lace Glueless Wig — Body Wave','wigs','Body Wave',215000,260000,4.8,178,SH.brown,'Pre-plucked HD lace that melts into any skin tone. Glueless, beginner-friendly and ready to wear out of the box.',610,true),
   P('p3','Double Drawn Bundles (Bundle of 3)','bundles','Body Wave',96000,135000,4.7,304,SH.jet,'Thick from root to tip with no thin ends. Three matched wefts, full enough for a complete sew-in.',1320),
@@ -969,13 +970,13 @@ PRODUCTS.forEach(p=>Object.assign(p,MEDIA[p.id]||{}));
    n = customer name, r = stars (1-5), t = the review text
    Products not listed here fall back to DEFAULT_REVIEWS.
    ================================================================ */
-const DEFAULT_REVIEWS = [
+let DEFAULT_REVIEWS = [
   { n: 'Chiamaka E.', r: 5, t: 'Soft, full and zero shedding after two washes. Exactly as described.' },
   { n: 'Tola A.', r: 5, t: 'The lace melted perfectly. Got so many compliments at the wedding!' },
   { n: 'Ngozi M.', r: 4, t: 'Beautiful hair and fast delivery. Wish it came in a longer length.' },
 ];
 
-const REVIEWS = {
+let REVIEWS = {
   p1: [
     { n: 'Adaeze O.', r: 5, t: 'This bone straight is the real deal. Pressed it once and it stayed sleek for weeks.' },
     { n: 'Funmi B.', r: 5, t: 'Second time buying this exact hair. No shedding, no tangling.' },
@@ -1476,6 +1477,52 @@ function countUp(el){
   tick();
 }
 
+const SUPABASE_URL = 'https://pozbfoeurtimlormocxg.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_f1eINrYwvCB-_QcNnbZrvw_zOqbhEWP';
+const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+async function loadFromSupabase(){
+  if(!sbClient) return;
+  try{
+    const [c,p,r] = await Promise.all([
+      sbClient.from('categories').select('*').order('sort_order'),
+      sbClient.from('products').select('*').order('created_at',{ascending:false}),
+      sbClient.from('reviews').select('*').order('created_at',{ascending:false})
+    ]);
+    if(c.error||p.error) throw (c.error||p.error);
+
+    const prods = (p.data||[]).map(x=>{
+      const price = Number(x.price)||0, old = x.old_price?Number(x.old_price):null;
+      const gallery = Array.isArray(x.gallery)?x.gallery:[];
+      return {
+        id:String(x.id), name:x.name, cat:x.category, texture:x.texture||'',
+        price, old, discount: old&&old>price?Math.round((1-price/old)*100):0,
+        rating:Number(x.rating)||0, reviews:Number(x.review_count)||0,
+        sh: SH[x.sh_key]||SH.natural, desc:x.description||'',
+        sold:Number(x.sold)||0, newish:!!x.is_new, featured:!!x.is_featured,
+        lengths:(Array.isArray(x.lengths)&&x.lengths.length)?x.lengths:['14"','16"','18"','20"','22"','24"'],
+        img:x.image_url||null, vid:x.video_url||null,
+        imgs:[x.image_url,...gallery].filter(Boolean)
+      };
+    });
+    const cats = (c.data||[]).map(x=>({
+      id:x.id, name:x.name, sub:x.sub||'', sh:SH[x.sh_key]||SH.natural,
+      n: Number(x.item_count)||prods.filter(q=>q.cat===x.id).length, img:x.img||null
+    }));
+
+    const revs = {};
+    (r.data||[]).forEach(x=>{ (revs[x.product_id]=revs[x.product_id]||[]).push({n:x.customer_name,r:x.rating,t:x.review_text}); });
+
+    PRODUCTS = prods; CATEGORIES = cats; REVIEWS = revs; DEFAULT_REVIEWS = [];
+    TEXTURES = [...new Set([...TEXTURES, ...prods.map(q=>q.texture).filter(Boolean)])];
+    LENGTHS  = [...new Set([...LENGTHS, ...prods.flatMap(q=>q.lengths)])];
+
+    cart = cart.filter(i=>find(i.id)); wishlist = wishlist.filter(id=>find(id)); save();
+  }catch(err){
+    console.warn('Could not load live data:', err);
+  }
+}
+
 /* ---------- init ---------- */
 function init(){
   renderCategories();
@@ -1498,7 +1545,7 @@ function init(){
   $$('.reveal,[data-count]').forEach(el=>io.observe(el));
   
 }
-init();
+loadFromSupabase().then(init);
 </script>
 </body>
 </html>

@@ -996,10 +996,93 @@ const SH = {
   caramel:['#b07a3e','#6e451f','#e2b377']
 };
 
-const SUPABASE_URL = 'https://pozbfoeurtimlormocxg.supabase.co'; const SUPABASE_KEY = 'sb_publishable_f1eINrYwvCB-_QcNnbZrvw_zOqbhEWP'; const sbc = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-function mapCategory(row){ return {id:row.id, name:row.name, sub:row.sub, sh:SH[row.sh_key]||SH.natural, n:row.item_count||0, img:row.img}; } function mapProduct(row){ const price=Number(row.price)||0, old=row.old_price?Number(row.old_price):undefined; return { id:row.id, name:row.name, cat:row.category, texture:row.texture, price, old, rating:Number(row.rating)||0, reviews:Number(row.review_count)||0, sh:SH[row.sh_key]||SH.natural, desc:row.description||'', sold:Number(row.sold)||0, newish:!!row.is_new, lengths:(row.lengths&&row.lengths.length)?row.lengths:['14"','16"','18"','20"','22"','24"'], discount: old?Math.round((1-price/old)*100):0, img: row.image_url||null, vid: row.video_url||null, imgs: (row.gallery&&row.gallery.length)?row.gallery:undefined, }; }
-let CATEGORIES=[], PRODUCTS=[], REVIEWS={}; const DEFAULT_REVIEWS = [ {n:'Chiamaka E.',r:5,t:'Soft, full and zero shedding after two washes. Exactly as described.'}, {n:'Tola A.',r:5,t:'The lace melted perfectly. Got so many compliments at the wedding!'}, {n:'Ngozi M.',r:4,t:'Beautiful hair and fast delivery. Wish it came in a longer length.'}, ];
-async function loadCatalog(){ try{ const [catRes, prodRes, revRes] = await Promise.all([ sbc.from('categories').select('').order('sort_order'), sbc.from('products').select('').order('created_at',{ascending:false}), sbc.from('reviews').select('*'), ]); if(catRes.error) console.error('categories error:', catRes.error); if(prodRes.error) console.error('products error:', prodRes.error); CATEGORIES = (catRes.data||[]).map(mapCategory); PRODUCTS = (prodRes.data||[]).map(mapProduct); REVIEWS = {}; (revRes.data||[]).forEach(r=>{ if(!REVIEWS[r.product_id]) REVIEWS[r.product_id]=[]; REVIEWS[r.product_id].push({n:r.customer_name, r:r.rating, t:r.review_text}); }); const validIds = new Set(PRODUCTS.map(p=>p.id)); cart = cart.filter(c=>validIds.has(c.id)); wishlist = wishlist.filter(id=>validIds.has(id)); save(); }catch(err){ console.error('Could not load catalog from Supabase', err); } }
+/* ---------- categories ---------- */
+const CATEGORIES = [
+  {id:'wigs', name:'Wigs', sub:'HD lace & glueless', sh:SH.natural, n:24, img:'https://files.catbox.moe/89j1lo.jpeg'},
+  {id:'bundles', name:'Human Hair Bundles', sub:'Double drawn wefts', sh:SH.jet, n:38, img:'https://files.catbox.moe/ot74ks.jpeg'},
+  {id:'frontals', name:'Frontals', sub:'13×4 & 13×6 HD lace', sh:SH.brown, n:16, img:'https://files.catbox.moe/ro25mg.jpeg'},
+  {id:'closures', name:'Closures', sub:'4×4 & 5×5 lace', sh:SH.caramel, n:14, img:'https://files.catbox.moe/y5kcxm.jpeg'},
+  {id:'bone', name:'Bone Straight', sup:'Bone Straight', sub:'Silky & sleek', sh:SH.honey, n:20, img:'https://files.catbox.moe/5tbdqy.jpeg'},
+  {id:'curly', name:'Curly Hair', sub:'Deep & water wave', sh:SH.auburn, n:22, img:'https://files.catbox.moe/tdjs18.jpeg'},
+  {id:'accessories', name:'Accessories', sub:'Caps, glue & care', sh:SH.ash, n:18, img:'https://files.catbox.moe/u7mxbk.jpeg'},
+  {id:'luxury', name:'Luxury Collections', sub:'Single-donor raw', sh:SH.ombre, n:9, img:'https://files.catbox.moe/ot74ks.jpeg'},
+];
+
+/* ---------- products ---------- */
+const TEXTURES = ['Bone Straight','Body Wave','Deep Curly','Kinky Straight','Water Wave','Loose Wave'];
+const LENGTHS  = ['12"','14"','16"','18"','20"','22"','24"','26"','30"'];
+
+const P = (id,name,cat,texture,price,old,rating,reviews,sh,desc,sold,newish=false,lengths=['14"','16"','18"','20"','22"','24"'])=>(
+  {id,name,cat,texture,price,old,rating,reviews,sh,desc,sold,newish,lengths,
+   discount: old?Math.round((1-price/old)*100):0});
+
+const PRODUCTS = [
+  P('p1','Raw Vietnamese Bone Straight','bone','Bone Straight',128000,180000,4.9,212,SH.natural,'Sleek, glassy and impossibly soft. Single-donor raw hair that holds a sleek press and bounces back after every wash.',940,true,['14"','16"','18"','20"','22"','24"','26"','30"']),
+  P('p2','HD Lace Glueless Wig — Body Wave','wigs','Body Wave',215000,260000,4.8,178,SH.brown,'Pre-plucked HD lace that melts into any skin tone. Glueless, beginner-friendly and ready to wear out of the box.',610,true),
+  P('p3','Double Drawn Bundles (Bundle of 3)','bundles','Body Wave',96000,135000,4.7,304,SH.jet,'Thick from root to tip with no thin ends. Three matched wefts, full enough for a complete sew-in.',1320),
+  P('p4','13×4 HD Frontal — Deep Curly','frontals','Deep Curly',74000,98000,4.8,141,SH.auburn,'Bouncy, defined curls on a transparent HD frontal. Versatile parting from temple to temple.',520),
+  P('p5','5×5 HD Closure — Straight','closures','Bone Straight',52000,68000,4.6,98,SH.caramel,'A neat, natural-looking crown with a generous 5×5 parting space and bleached knots.',430),
+  P('p6','Honey Blonde Curly Wig','curly','Deep Curly',238000,295000,4.9,205,SH.honey,'Sun-kissed honey curls on a glueless cap. A statement colour that turns every head.',388,true),
+  P('p7','Water Wave Bundles (Bundle of 4)','bundles','Water Wave',132000,168000,4.7,176,SH.brown,'Soft, beachy waves with effortless movement. Four full wefts for maximum density.',700),
+  P('p8','Raw Burgundy Straight Wig','luxury','Bone Straight',312000,380000,5.0,87,SH.burgundy,'Limited raw collection. Deep wine tones, mirror shine and lace that disappears.',120,true),
+  P('p9','Kinky Straight Bundles','bundles','Kinky Straight',88000,112000,4.6,133,SH.natural,'Blends seamlessly with relaxed and natural textures for a flawless leave-out.',560),
+  P('p10','Loose Wave Frontal Wig','wigs','Loose Wave',199000,245000,4.8,162,SH.brown,'Soft loose waves with a full, romantic finish on a glueless HD cap.',445),
+  P('p11','Edge Control & Care Kit','accessories','Bone Straight',24000,32000,4.5,260,SH.ash,'Everything to keep your install crisp: edge control, lace tint, wig cap and a wide-tooth comb.',1010),
+  P('p12','Raw Single-Donor Luxe Set','luxury','Body Wave',420000,520000,5.0,64,SH.ombre,'Our flagship: matched single-donor bundles with frontal, ombre-ready and rarely restocked.',95,true),
+  P('p13','Ash Blonde Bob Wig','wigs','Bone Straight',176000,210000,4.7,119,SH.ash,'A sharp, modern bob in cool ash blonde. Lightweight and ready to slay daily.',330),
+  P('p14','Deep Curly Bundles (Bundle of 3)','curly','Deep Curly',104000,138000,4.8,189,SH.auburn,'Tight, springy curls that drink up product and keep their pattern wash after wash.',640),
+  P('p15','Caramel Body Wave Wig','wigs','Body Wave',228000,270000,4.9,154,SH.caramel,'Warm caramel waves with dimension and shine. Glueless and pre-plucked.',410,true),
+  P('p16','4×4 Lace Closure — Curly','closures','Deep Curly',49000,64000,4.5,76,SH.auburn,'A tidy curly crown to finish your bundles with a believable, defined parting.',300),
+];
+
+/* ================================================================
+   PRODUCT PHOTOS & VIDEOS — paste your Cloudinary / Catbox links
+   ----------------------------------------------------------------
+   img : direct photo link (.jpg / .png / .webp)
+   vid : direct video link (.mp4) — plays silently, 3–5s clips are best
+   If both are set, the photo shows while the video loads.
+   Products without a link keep the styled swatch.
+   ================================================================ */
+const MEDIA={
+  p1:{vid:'https://cloud.yardansh.com/8XD8Dc.mov',
+    imgs:['https://cloud.yardansh.com/8XD8Dc.mov','https://cloud.yardansh.com/oGoafC.mp4']
+  },
+  p2:{vid:'https://cloud.yardansh.com/oGoafC.mp4'},
+  p3:{vid:'https://cloud.yardansh.com/9t6jgf.mov'},
+  p4:{vid:'https://cloud.yardansh.com/RBVgNh.mov'},
+  p5:{vid:'https://cloud.yardansh.com/zLFxo3.mov'},
+  p6:{vid:'https://cloud.yardansh.com/y88duW.mov'},
+  p7:{vid:'https://cloud.yardansh.com/nLSEBp.mov'},
+  p8:{vid:'https://cloud.yardansh.com/bwgF75.mov'},
+  p9:{vid:'https://cloud.yardansh.com/awNDvx.mov'},
+  p10:{vid:'https://cloud.yardansh.com/Kxk4vE.mov'},
+  p11:{vid:'https://cloud.yardansh.com/wLBRSq.mov'},
+  p12:{vid:'https://cloud.yardansh.com/Kn2y29.mov'},
+  p13:{vid:'https://cloud.yardansh.com/yb89uK.mov'},
+  p14:{vid:'https://cloud.yardansh.com/VEsAFc.mov'},
+};
+PRODUCTS.forEach(p=>Object.assign(p,MEDIA[p.id]||{}));
+
+/* ================================================================
+   PER-PRODUCT REVIEWS — attach reviews by product id
+   n = customer name, r = stars (1-5), t = the review text
+   Products not listed here fall back to DEFAULT_REVIEWS.
+   ================================================================ */
+const DEFAULT_REVIEWS = [
+  { n: 'Chiamaka E.', r: 5, t: 'Soft, full and zero shedding after two washes. Exactly as described.' },
+  { n: 'Tola A.', r: 5, t: 'The lace melted perfectly. Got so many compliments at the wedding!' },
+  { n: 'Ngozi M.', r: 4, t: 'Beautiful hair and fast delivery. Wish it came in a longer length.' },
+];
+
+const REVIEWS = {
+  p1: [
+    { n: 'Adaeze O.', r: 5, t: 'This bone straight is the real deal. Pressed it once and it stayed sleek for weeks.' },
+    { n: 'Funmi B.', r: 5, t: 'Second time buying this exact hair. No shedding, no tangling.' },
+  ],
+  p2: [
+    { n: 'Kemi A.', r: 5, t: 'Wore it straight out of the box, no glue. The lace disappeared into my skin.' },
+  ],
+};
 
 function media(p,seed,fallback){
   if(p.vid) return `<video src="${p.vid}"${p.img?` poster="${p.img}"`:''} autoplay muted loop playsinline preload="metadata"></video>`;
@@ -1492,9 +1575,54 @@ function countUp(el){
   tick();
 }
 
+const SUPABASE_URL = 'https://pozbfoeurtimlormocxg.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_f1eINrYwvCB-_QcNnbZrvw_zOqbhEWP';
+const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+async function loadFromSupabase(){
+  if(!sbClient) return;
+  try{
+    const [c,p,r] = await Promise.all([
+      sbClient.from('categories').select('*').order('sort_order'),
+      sbClient.from('products').select('*').order('created_at',{ascending:false}),
+      sbClient.from('reviews').select('*').order('created_at',{ascending:false})
+    ]);
+    if(c.error||p.error) throw (c.error||p.error);
+
+    const prods = (p.data||[]).map(x=>{
+      const price = Number(x.price)||0, old = x.old_price?Number(x.old_price):null;
+      const gallery = Array.isArray(x.gallery)?x.gallery:[];
+      return {
+        id:String(x.id), name:x.name, cat:x.category, texture:x.texture||'',
+        price, old, discount: old&&old>price?Math.round((1-price/old)*100):0,
+        rating:Number(x.rating)||0, reviews:Number(x.review_count)||0,
+        sh: SH[x.sh_key]||SH.natural, desc:x.description||'',
+        sold:Number(x.sold)||0, newish:!!x.is_new, featured:!!x.is_featured,
+        lengths:(Array.isArray(x.lengths)&&x.lengths.length)?x.lengths:['14"','16"','18"','20"','22"','24"'],
+        img:x.image_url||null, vid:x.video_url||null,
+        imgs:[x.image_url,...gallery].filter(Boolean)
+      };
+    });
+    const cats = (c.data||[]).map(x=>({
+      id:x.id, name:x.name, sub:x.sub||'', sh:SH[x.sh_key]||SH.natural,
+      n: Number(x.item_count)||prods.filter(q=>q.cat===x.id).length, img:x.img||null
+    }));
+
+    const revs = {};
+    (r.data||[]).forEach(x=>{ (revs[x.product_id]=revs[x.product_id]||[]).push({n:x.customer_name,r:x.rating,t:x.review_text}); });
+
+    PRODUCTS = prods; CATEGORIES = cats; REVIEWS = revs; DEFAULT_REVIEWS = [];
+    TEXTURES = [...new Set([...TEXTURES, ...prods.map(q=>q.texture).filter(Boolean)])];
+    LENGTHS  = [...new Set([...LENGTHS, ...prods.flatMap(q=>q.lengths)])];
+
+    cart = cart.filter(i=>find(i.id)); wishlist = wishlist.filter(id=>find(id)); save();
+  }catch(err){
+    console.warn('Could not load live data:', err);
+  }
+}
+
 /* ---------- init ---------- */
-async function init(){
-  await loadCatalog();
+function init(){
   renderCategories();
   renderFeatured();
   renderNew();
@@ -1514,7 +1642,7 @@ async function init(){
   $$('.reveal,[data-count]').forEach(el=>io.observe(el));
   setTimeout(()=>$('#preloader').classList.add('hide'),550);
 }
-init();
+loadFromSupabase().then(init);
 </script>
 </body>
 </html>
